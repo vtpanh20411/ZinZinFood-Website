@@ -1,0 +1,224 @@
+.PolicyPage{
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 122px;
+}
+
+/* Định dạng toàn trang */
+ .tabPanel-widget {
+  position: relative;  
+  background: rgb(255, 255, 255);
+}
+
+.policy-tab-bar{
+  display: flex;
+}
+
+/* MENU BAR ==================================================== */
+.menu-bar-hid{
+  width: 70px;
+  height: 41px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#check-policy-tab{
+  display: none;
+}
+
+.format-icon-bar{
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  justify-self: center;
+  padding: 0px 12px 7px;
+}
+
+
+.div-list-menu-policy{
+  display: none;
+}
+
+.list-menu-bar-hid{
+  display: block;
+  list-style-type: none;
+  background-color: #fff;
+  position: absolute;
+  width: 320px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 6px 1px #eee;
+  z-index: 99;
+  left: 0;
+  margin-top: 0px;
+  padding-left: 10px;
+}
+
+.list-menu-bar-hid li{
+  display: list-item;
+  text-align: left;
+  padding: 7px;
+}
+
+.list-menu-bar-hid li:hover{
+  background-color: #BD3213;
+  color:rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+#check-policy-tab:checked ~ .div-list-menu-policy{
+  display: block;
+}
+#check-policy-tab:unchecked ~ .div-list-menu-policy{
+  display: none;
+}
+
+
+
+/* TAB POLICY =================================================== */
+/* Để mặc định tab đầu tiên và có thể chuyển tab được */
+.tabPanel-widget > label {
+  position: absolute;
+  z-index: 1;
+}
+
+/* Định dạng cho lable và text trong từng ô */
+/* Đổi width từ 9 -> 12 */
+/* Nên đổi width thành fit-content, nhưng mà đổi xong thì không có click vào được */
+.tabPanel-widget > label,
+.tabPanel-widget > h2 {
+  font-size: 16px;
+  width: 15em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border-radius: 5px;
+}
+
+/* Định dạng title của từng tab */
+.tabPanel-widget > h2 {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  background: rgb(107, 107, 107);
+  color: #fff;
+}
+
+/* Border giữa các h2 */
+.tabPanel-widget > h2 {
+  border: 1px solid #fff;  
+}
+
+/* Căn cho các tab trên cùng 1 hàng thẳng */
+.tabPanel-widget > label ~ label,
+.tabPanel-widget > h2 ~ h2 {
+  position: absolute;
+  top: 0;
+}
+
+
+/* Căn vị trí bắt đầu cho tab 1 */
+/* h2 có hay không không ảnh hưởng */
+.tabPanel-widget label:nth-child(1),
+.tabPanel-widget h2:nth-child(3) {
+  left: 0em;
+}
+
+/* Căn vị trí bắt đầu cho tab 2 */
+.tabPanel-widget label:nth-child(5),
+.tabPanel-widget h2:nth-child(7) {
+  left: 15em;
+}
+
+/* Căn vị trí bắt đầu cho tab 3 */
+.tabPanel-widget label:nth-child(9),
+.tabPanel-widget h2:nth-child(11) {
+  left: 30em;
+}
+
+/* Căn vị trí bắt đầu cho tab 4 */
+.tabPanel-widget label:nth-child(13),
+.tabPanel-widget h2:nth-child(15) {
+  left: 45em;
+}
+
+/* Căn vị trí bắt đầu cho tab 5 */
+.tabPanel-widget label:nth-child(17),
+.tabPanel-widget h2:nth-child(19) {
+  left: 60em;
+  width: 18em;
+}
+
+/* Phân chia nội dung cho từng tab */
+.tabPanel-widget input + h2 + div {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
+}
+
+/* Hiển thị nội dung trong từng tab */
+.tabPanel-widget input:checked + h2 + div {
+  position: static !important;
+  padding: 1em !important;
+  height: auto !important; 
+  width: auto !important; 
+}
+
+/* Add thêm cursor cho label */
+.tabPanel-widget label:hover {
+  cursor: pointer;
+}
+
+/* Chỉnh background của phần nội dung từng tab */
+.tabPanel-widget > div {
+  background: #ffffff;
+  padding: 1em;
+}
+
+/* Ẩn radio button */
+.tabPanel-widget input[name="tabs"] {
+  opacity: 0;
+  position: absolute;
+}
+
+/* Màu cho từng tab khi được chọn */
+.tabPanel-widget input[name="tabs"]:checked + h2 {
+  background: #BD3213;
+}
+
+/* Responsive cho thiết bị khác ngoài laptop */
+@media screen and (max-width: 45em) {
+  
+  /* hide unecessary label/control pairs */
+  .tabPanel-widget label,
+  .tabPanel-widget input[name="tabs"] {
+    display: none;
+  }
+}
+
+
+/* Design content in a page */
+
+.content-main-title{
+  text-align: center;
+  color:#BD3213;
+}
+.content-title-level-1{
+  color:#BD3213;
+}
+
+.content-note {
+  font-style: italic;
+}
+
+/* RESPONSIVE ============================================ */
+@media screen and (max-width: 1320px) {
+  .tabPanel-widget h2 {
+    display: none;
+  }
+  .tabPanel-widget{
+    background-color: #BD3213;
+  }
+  
+}
+  

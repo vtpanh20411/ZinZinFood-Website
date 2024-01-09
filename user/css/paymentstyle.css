@@ -1,0 +1,274 @@
+.div_main_content{
+    font-family:Arial, Helvetica, sans-serif;
+    padding-top: 130px;
+}
+
+
+/* DETAIL====================================== */
+/* Sản phẩm------------------------------------------------ */
+.horizontalarea_1{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 20px;
+}
+.column1_product{
+    grid-column: 1;
+    justify-self: flex-start;
+    margin-left: 30px;
+    width: auto;
+    color: rgb(0, 0, 0);
+}
+.column2_paymentchoice{
+    grid-column: 2;
+}
+.column1_product .product{
+    display: grid;
+    grid-template:
+    'a b b b b c'
+    'a d d d d e';
+    min-width: 800px;
+    padding: 10px;
+    margin: 10px 0px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+            0 2px 2px rgba(0,0,0,0.12),
+             0 4px 4px rgba(0,0,0,0.12),
+            0 8px 8px rgba(0,0,0,0.12),
+            0 16px 16px rgba(0,0,0,0.12);
+}
+
+.column1_product .product:hover{
+    background-color: #BD3213;
+    color: white;
+}
+.column1_product .product img{
+    grid-area: a;
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+    align-self: center;
+    align-items: center;
+    justify-self: center;
+}
+.column1_product .product .productname{
+    grid-area: b;
+    align-items: flex-start;
+}
+.column1_product .product .amount{
+    grid-area: c;
+    vertical-align: middle;
+    align-items: center;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+.column1_product .product .type{
+    grid-area: d;
+    font-style: italic;
+}
+.column1_product .product .total{
+    grid-area: e;
+}
+
+/* Thanh toán -------------------------------- */
+.column2_paymentchoice{
+    padding: 10px;
+    margin: 10px 0px;
+    border: 1px solid #BD3213;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-right: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+            0 2px 2px rgba(0,0,0,0.12),
+             0 4px 4px rgba(0,0,0,0.12),
+            0 8px 8px rgba(0,0,0,0.12),
+            0 16px 16px rgba(0,0,0,0.12);
+}
+.column2_paymentchoice h3{
+    text-align: center;
+}
+
+.column2_paymentchoice .paymentchoice_form div{
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.column2_paymentchoice .paymentchoice_form div:hover{
+    background-color: #BD3213;
+    color: white;
+}
+
+/* CHUNG CHO 3 Ô ĐỊA CHỈ, VOUCHER, NOTES */
+/* .horizontalarea_2 div:hover{
+    background-color: #BD3213;
+    color: white;
+} */
+
+/* .horizontalarea_2 div:hover + .payment-input-box1{
+    background-color: #BD3213;
+    color: white;
+} */
+
+/* Địa chỉ -------------------------------- */
+.title{
+    margin-top: 15px;
+}
+.inputbox {
+    margin-top: 15px;
+}
+.deliv_define{
+    margin-top: 15px;
+}
+
+.row1_address{
+    margin: 20px 30px 0px 30px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 15px 0px 10px 15px;
+    height: 170px;
+}
+
+.payment-input-box1{
+    border-radius: 5px;
+    width: 97%;
+    height: 50px;
+    padding-left: 10px;
+}
+.delivchoice_form {
+    display: flex;
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+}
+.delivchoice_form div {
+    margin-left: 15px;
+}
+/* Voucher -------------------------------- */
+.row2_voucher{
+    margin: 20px 30px 0px 30px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px 0px 10px 15px;
+    height: 130px;
+}
+
+/* Lời nhắn -------------------------------- */
+.row3_takenotes{
+    margin: 20px 30px 0px 30px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px 0px 10px 15px;
+    height: 130px;
+}
+
+
+/* Total payment ==================================== */
+.row4_totalpay{
+    display: grid;
+    text-align: end;
+    grid-template:
+        'a a a b c'
+        'd d d e f'
+        'g g g h i'
+        'k k k l m'
+        'n n n o o';
+    margin: 5px;
+    font-weight: bold;
+}
+
+.row4_totalpay input{
+    border: 0px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: transparent;
+}
+.row4_totalpay .a1{
+    grid-area: b;
+    margin: 10px 30px 0px 0px;
+}
+.row4_totalpay .a2{
+    grid-area: e;
+    margin: 10px 30px 0px 0px;
+}
+.row4_totalpay .a3{
+    grid-area: h;
+    margin: 10px 30px 0px 0px;
+}
+.row4_totalpay .a4{
+    grid-area: l;
+    margin: 10px 30px 0px 0px;
+}
+
+.row4_totalpay .b1{
+    grid-area: c;
+    margin: 10px 30px 0px 0px;
+}
+.row4_totalpay .b2{
+    grid-area: f;
+    margin: 10px 30px 0px 0px;
+}
+.row4_totalpay .b3{
+    grid-area: i;
+    margin: 10px 30px 0px 0px;
+}
+.row4_totalpay .b4{
+    grid-area: m;
+    margin: 10px 30px 0px 0px;
+}
+.row4_totalpay .submit_btn{
+    grid-area: o;
+    padding: 5px;
+}
+.row4_totalpay .submit_btn input{
+    border-radius: 5px;
+    background-color: #BD3213;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    justify-self: center;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+/* RESPONSIVE =============================== ====================*/
+@media only screen and (max-width: 1430px) {
+
+.div_main_content{
+    align-items: center;
+}
+.horizontalarea_1{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.column1_product{
+    margin-left: 0px;
+}
+
+.column2_paymentchoice{
+    margin-right: 0px;
+}
+}
+
+@media only screen and (max-width: 900px) {
+    .column1_product .product{
+        display: grid;
+        grid-template:
+        'a b c'
+        'a d e';
+        min-width: none;
+    }
+        
+    .payment-input-box1{
+        width: 70%;
+    }
+}
+

@@ -1,0 +1,332 @@
+:root {
+    --red: #BD3213;
+    --black: #000;
+    --white: #fff;
+    --light_gray: #eceff3;
+}
+
+* {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    transition: width none;
+}
+
+body {
+    background: var(--white);
+}
+.title{
+    text-decoration:none;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 32px;
+    font-style:normal;
+}
+.title:hover {
+    color: #BD3213;
+}
+.container_Products {
+    width: 95%;
+    margin: 1.5em auto;
+    font-size:16px;
+}
+.btn_Products {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 0px 10px 0px 10px;
+}
+.btn_Products_box {
+    display: inline-flex;
+    justify-content: left;
+}
+.functions_box {
+    display: inline-flex;
+    margin: 5px 0px;
+}
+.functions_box div {
+    justify-content: right;
+}
+.filter_box {
+    color: white;
+    width: 140px;
+    background: var(--red);
+    padding: 5px;
+    border-radius: 16px;
+    margin-right: 8px;
+    justify-content: left;
+}
+.option_Product {
+    color: white;
+    font-weight: bold;
+    background-color: #BD3213;
+    align-items: center;
+    justify-content: right;
+    vertical-align: middle;
+}
+.fa-filter {
+    padding-left: 5px;
+}
+.search_box {
+    width: 150px;
+    border: 1px solid #BD3213;
+    padding: 5px;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+}
+.search_box input {
+    width: 130px;
+    justify-content: center;
+    padding: 0px 30px 0px 5px;
+    vertical-align: middle;
+}
+.fa-search {
+    align-items: center;
+    justify-content: right;
+    margin-left: -25px;
+    color: #BD3213;
+}
+.functions_box button {
+    border-radius: 10px;
+    margin: 0px 4px;
+    color: #fff;
+    background-color: #BD3213;
+    font-weight: bold;
+    padding: 6px 10px;
+}
+/*-------------------------------CONTENT PRODUCTS---------------------------------*/
+.content_Products {
+    background: var(--white);
+    padding: 1.5em 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.table_list_Product {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0 0.1em;
+}
+
+    .table_list_Product tr th {
+        background: var(--red);
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 0.5em;
+        color: #fff;
+        text-align: center;
+    }
+
+    .table_list_Product tr td {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        padding: 0.5em;
+        text-align: center;
+    }
+
+    .table_list_Product .last td {
+        border-bottom: none;
+    }
+
+    .table_list_Product .last {
+        border-bottom: none;
+    }
+
+    .table_list_Product tr:hover {
+        background: var(--red);
+        color: #fff;
+    }
+
+/*-------------------------------------BOX------------------------------*/
+
+.box_container {
+    display: flex;
+    margin: 10px 0px;
+    align-items:center;
+    justify-content:center;
+}
+
+.box_1 {
+    width: calc(100%/4);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background: var(--white);
+    position: relative;
+    padding: 10px;
+}
+
+.box_1_tittle {
+    font-size: 18px;
+    color: #000;
+    margin: auto;
+    font-weight: bold;
+}
+
+.box_1_number {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: right;
+    color: var(--red);
+    margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+    .table_list_Product {
+        text-align: unset;
+    }
+
+        .table_list_Product tr {
+            border: none;
+            text-align:end;
+        }
+
+
+    thead {
+        display: none;
+    }
+
+    .table_list_Product, .table_list_Product tbody, .table_list_Product tr, .table_list_Product td {
+        display: block;
+        width: 100%;
+    }
+
+        .table_list_Product tr {
+            margin-bottom: 15px;
+            border: 2px solid var(--red);
+            padding: 10px;
+            background-color: var(--white);
+        }
+
+        .table_list_Product td:first-child::before {
+            text-align: center;
+            vertical-align: middle;
+            content: "Mã sản phẩm";
+        }
+
+        .table_list_Product td:nth-child(2)::before {
+            content: "Tên sản phẩm";
+        }
+
+        .table_list_Product td:nth-child(3)::before {
+            content: "Nguồn nhập";
+        }
+
+        .table_list_Product td:nth-child(4)::before {
+            content: "Số lượng";
+        }
+        .table_list_Product td:nth-child(5)::before {
+            content: "Tình trạng";
+        }
+        .table_list_Product td:nth-child(6)::before {
+            content: "Thời gian";
+        }
+    td {
+        text-align: right;
+    }
+
+        td::before {
+            float: left;
+            font-weight: bold;
+            margin-right: 10%;
+        }
+
+    .table_list_Product th, tr, td {
+        border-bottom: 0;
+        font-size: 14px;
+    }
+
+    .table_list_Product td:last-child {
+        width: 100%;
+    }
+
+    .box_container{
+        display:block;
+    }
+    .box_1{
+        width:100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .table_list_Product {
+        text-align: unset;
+    }
+        .table_list_Product tr {
+            border: none;
+            text-align:end;
+        }
+    thead {
+        display: none;
+    }
+    .table_list_Product, .table_list_Product tbody, .table_list_Product tr, .table_list_Product td {
+        display: block;
+        width: 100%;
+    }
+
+        .table_list_Product tr {
+            margin-bottom: 15px;
+            border: 2px solid var(--red);
+            padding: 10px;
+            background-color: var(--white);
+        }
+
+        .table_list_Product td:first-child::before {
+            text-align: center;
+            vertical-align: middle;
+            content: "Mã sản phẩm";
+        }
+
+        .table_list_Product td:nth-child(2)::before {
+            content: "Tên sản phẩm";
+        }
+
+        .table_list_Product td:nth-child(3)::before {
+            content: "Nguồn nhập";
+        }
+
+        .table_list_Product td:nth-child(4)::before {
+            content: "Số lượng";
+        }
+        .table_list_Product td:nth-child(5)::before {
+            content: "Tình trạng";
+        }
+        .table_list_Product td:nth-child(6)::before {
+            content: "Thời gian";
+        }
+    td {
+        text-align: right;
+    }
+
+        td::before {
+            float: left;
+            font-weight: bold;
+            margin-right: 10%;
+        }
+
+    .table_list_Product th, tr, td {
+        border-bottom: 0;
+        font-size: 14px;
+    }
+
+    .table_list_Product td:last-child {
+        width: 100%;
+    }
+
+    .box_container{
+        display:block;
+    }
+    .box_1{
+        width:100%;
+    }
+    .btn_Products {
+        display: block;
+    }
+    .btn_Products_box {
+        display: inline-flex;
+    }
+    .functions_box {
+        display: inline-flex;
+    }
+}

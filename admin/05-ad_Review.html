@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="angular/angular.min.js"></script>
+    <title>Đánh giá khách hàng | ZinZin Food - Đồ ăn vặt ZinZin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-----------------------------------------sidebar + header css-------------------------------------->
+    <link rel="stylesheet" type="text/css" href="css/ad_Sidebar.css" />
+    <link rel="stylesheet" type="text/css" href="css/ad_Review.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style></style>
+</head>
+<body ng-app="angularApp" ng-controller="ReviewController" class="mybody">
+    <!---------------------------SIDEBAR-------------------------->
+    <input type="checkbox" id="check" />
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="image/Review/White ver 02.png" width="80" height="70" />
+        </div>
+        <a href="01-ad_Dashboard.html"><i class="fas fa-columns" style="margin-right:10px;"></i>Dashboard</a>
+        <a href="06-ad_User.html"><i class="fas fa-user" style="margin-right:10px;"></i>Người dùng</a>
+        <a href="05-ad_Review.html"><i class="fas fa-comments" style="margin-right:10px;"></i>Đánh giá</a>
+        <button class="dropdown_btn"><i class="fas fa-cube" style="margin-right:10px;"></i>Sản phẩm<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container">
+            <a href="02-ad_Product.html">Danh sách</a>
+            <a href="03-ad_Stock.html">Kho hàng</a>
+        </div>
+        <a href="04-ad_Order.html"><i class="fas fa-shopping-cart" style="margin-right:10px;"></i>Đơn hàng</a>
+        <a href="07-ad_Delivery.html"><i class="fas fa-truck" style="margin-right:10px;"></i>Vận chuyển</a>
+        <a href="08-ad_Invoice.html"><i class="fas fa-file-alt" style="margin-right:10px;"></i>Hóa đơn</a>
+        <a href="09-ad_Marketing.html"><i class="fas fa-bullhorn" style="margin-right:10px;"></i>Marketing</a>
+        <a href="#"><i class="fas fa-gear" style="margin-right:10px;"></i>Cài đặt</a>
+        <a href="../user/02-Homepage.html"><i class="fas fa-times-circle" style="margin-right:10px;"></i>Đăng xuất</a>
+        <br/>
+    </div>
+    <!---------------------------CONTENT-------------------------->
+    <div class="content">
+        <!--------------------------HEADER-------------------------->
+        <div class="header">
+            <div class="user">
+                <a href="#" style="text-decoration: none; color:#fff;"><i class="fas fa-bell"></i></a>
+                <a href="#" style="text-decoration: none; color:#fff;"><i class="fas fa-user-circle" style="margin-right:10px;"></i>ZinZin Food</a>
+            </div>
+        </div>
+        <!-----------------MY CONTENT: REVIEW--------------------->
+        <div class="container_Reviews">
+            <a class="title">Đánh giá khách hàng</a>
+            <!-----------------HEADER BOX--------------------->
+            <div class="box_container">
+                <div class="box_1" style="margin: 10px 10px 10px 0px;">
+                    <p class="box_1_tittle">Số đơn hàng</p>
+                    <p class="box_1_number">5</p>
+                </div>
+                <div class="box_1" style="margin: 10px 10px 10px 0px;">
+                    <p class="box_1_tittle">Số đánh giá</p>
+                    <p class="box_1_number">3</p>
+                </div>
+                <div class="box_1" style="margin: 10px 10px 10px 0px;">
+                    <p class="box_1_tittle">Sao trung bình</p>
+                    <p class="box_1_number">5.0</p>
+                </div>
+                <div class="box_1" style="margin: 10px 10px 10px 0px;">
+                    <p class="box_1_tittle">Sao cao nhất</p>
+                    <p class="box_1_number">3 / 5<i style="font-size:30px;" class="fas fa-star"></i></p>
+                </div>
+                <div class="box_1" style="margin: 10px 0px 10px 0px;">
+                    <p class="box_1_tittle">Sao thấp nhất</p>
+                    <p class="box_1_number">0 / 1<i style="font-size:30px;" class="fas fa-star"></i></p>
+                </div>
+            </div>
+            <!--------------------------TABLE LIST Product---------------------------------->
+            <div class="content_Reviews">
+                <table class="btn_Reviews">
+                    <tbody>
+                        <td class="btn_Reviews_box">
+                            <div class="filter_box">
+                                <i class="fas fa-filter"></i>
+                                <select class="option_Review">
+                                    <option>Tất cả</option>
+                                    <option>Mới nhất</option>
+                                    <option>Đã trả lời</option>
+                                    <option>Chưa trả lời</option>
+                                    <option>5 sao</option>
+                                    <option>4 sao</option>
+                                    <option>3 sao</option>
+                                    <option>2 sao</option>
+                                    <option>1 sao</option>
+                                </select>
+                            </div>
+                            <div class="search_box">
+                                <input type="search" placeholder="Tìm kiếm" id="search" />
+                                <a href="#"><i class="fas fa-search"></i></a>
+                            </div>
+                        </td>
+                        <td class="functions_box">
+                            <div>
+                                <button id="btnall" name="btnall" type="submit">Tất cả</button>
+                                <button id="btnmodify" name="btnmodify" type="submit">Sửa</button>
+                                <button id="btnerase" name="btnerase" type="submit">Xóa</button>
+                            </div>
+                        </td>
+                    </tbody>
+                </table>
+                <table class="table_list_Review">
+                    <colgroup>
+                        <col span="1" style="width: 15%;">
+                        <col span="1" style="width: 15%;">
+                        <col span="1" style="width: 20%;">
+                        <col span="1" style="width: 20%;">
+                        <col span="1" style="width: 15%;">
+                        <col span="1" style="width: 15%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Người dùng</th>
+                            <th>Mã đơn hàng</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Đánh giá</th>
+                            <th>Thời gian</th>
+                            <th>Tình trạng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tbody ng-repeat="review in reviews" class="user_review">
+                            <tr style="text-align: center;" class="userreview">
+                                    <td rowspan="2">
+                                        <div class="username">
+                                            <span class="userimg"><img src="{{review.userimg}}"/></span><br>
+                                            <span class="account-text"><b>{{review.username}}</b></span>
+                                        </div>
+                                    </td>
+                                    <td><span>{{review.madonhang}}</span></td>
+                                    <td><span>{{review.tensanpham}}</span></td>
+                                    <td>
+                                        <div class="stars" style="color: #F7BB34">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </td>
+                                    <td>{{review.date}}</td>
+                                    <td><i class="{{review.statusicon}}"></i>{{review.status}}</td>
+                            </tr>
+                            <tr style="text-align: center;" class="contentreview">
+                                <td colspan="6">{{review.review}}.</td>
+                            </tr>
+                            <tr style="text-align: justify;" class="historyreview">
+                                <td colspan="6"><span class="replied"><b>Trả lời: </b> {{review.reply}}</span><b> {{review.replyid}}</b></td>
+                            </tr>
+                            <tr style="text-align: center;" rowspan="2" class="replyfield">
+                                <td colspan="5">
+                                    <input class="reply" type="text" />
+                                </td>
+                                <td>
+                                    <button class="btn_confirm">Đăng</button><br/>
+                                    <button class="cancel">Hủy</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </tbody>
+                </table>
+            </div>
+            <!------------------------------------------------------------>
+        </div>
+        </div>
+    <!------------------------------------------------------------>
+    <script type="text/javascript">
+        var reviews = [
+        {
+          "userimg": "image/Review/khach1.jpg",
+          "username": "Thúy An",
+          "madonhang": "DH001",
+          "tensanpham": "Bánh tráng phô mai tôm hành",
+          "rating": "5",
+          "review": "Ăn ngon lắm nhé, bánh tráng màu siêu đẹp, đậm vị tôm luôn, càng ăn càng cuốn.",
+          "statusicon": "fas fa-times-circle",
+          "reply": "",
+          "replyid": "",
+          "status": "Chưa trả lời",
+          "date": "01/11/2022"
+        },
+        {
+            "userimg": "image/Review/khach2.jpg",
+          "username": "Thanh Bình",
+          "madonhang": "DH002",
+          "tensanpham": "Mực bento cay cay",
+          "rating": "5",
+          "review": "Shop đóng gói hàng đầy đủ, kĩ lưỡng. Bento siêu ngon, ăn dai dai cay cay thích lắm.",
+          "statusicon": "fas fa-times-circle",
+          "reply": "",
+          "replyid": "",
+          "status": "Chưa trả lời",
+          "date": "01/11/2022"
+        }
+        ,
+        {
+            "userimg": "image/Review/khach3.jpg",
+          "username": "Ngọc Trâm",
+          "madonhang": "DH003",
+          "tensanpham": "Khô gà lá chanh",
+          "rating": "5",
+          "ratingicon": "fas fa-star",
+          "review": "Chất lượng sản phẩm tuyệt vời ông mặt trời luôn. Ăn ngon ngon cay cay ngọt ngọt nên 1 gói ăn 1 ngày là hết luôn rồi.",
+          "statusicon": "fas fa-check-circle",
+          "reply": "Cảm ơn bạn đã ủng hộ shop. Shop mong bạn có trải nghiệm tuyệt vời với các sản phẩm của ZinZinFood.",
+          "replyid": "#AD001",
+          "status": "Đã trả lời",
+          "date": "01/11/2022"
+        }]
+
+        var app = angular.module("angularApp", []);
+    app.controller('ReviewController', function ($scope) {
+        $scope.reviews = reviews
+    });
+        
+        var dropdown = document.getElementsByClassName("dropdown_btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

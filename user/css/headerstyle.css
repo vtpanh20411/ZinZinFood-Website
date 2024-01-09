@@ -1,0 +1,381 @@
+.header{
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    background-color:#BD3213;
+    background-size: cover;
+    padding: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.header a {
+    text-decoration: none;
+    color: #eceff3;
+}
+
+/* Detail ------------------------------------- */
+
+/* Search bar -------------- */
+/* Logo --------------*/
+.header .logo{
+    position: relative;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+}
+.header .logotitle{
+    height: 25px;
+    width: auto;
+    margin-left: 10px;
+}
+.header .logokey{
+    height: 70px;
+    width: auto;
+}
+/* Search area-------- */
+.header .header-menu-bar-hid{
+    display: none;
+}
+
+.header .searchbar{
+    display: flex;
+    position: relative;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    margin: 10px 0px 0px 0px  
+}
+
+.header .inputbox-search {
+    position: relative;
+    width: 700px;
+    height: 40px;
+    background-color: #fff;
+    border-style: none;
+    border-radius: 5px 0px 0px 5px;
+    margin-left: 20px;
+    padding-left: 10px;
+    /* box-shadow: 2px 2px #7c7c7c; */
+}
+
+.header .search_box{
+    display: flex;
+    flex-direction: row;
+}
+.header .button_search_group{
+    min-width: 10%;
+    align-items: center;
+    vertical-align: middle;
+}
+.header .Search_Button{
+    position: relative;
+    width: 50px;
+    background-color: #eee;
+    height: 40px;
+    border-style: none;
+    border-radius: 0px 5px 5px 0px;
+}
+.header .button_search_group i{
+    font-size: 20px;
+}
+
+.header .tool-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center; 
+}
+
+.header .tool-group i{
+    color: white;
+    font-size: 35px;
+    margin: 0px 20px 0px 10px;
+}
+
+/* Navigationtab -------------*/
+.header .navigationtab{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0px;
+}
+.header .navigationtab li{
+    margin: 0px 20px 0px 0px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+.header .navigationtab li a {
+    color: white;
+    font-weight: bold;  
+    text-decoration: none;
+}
+.header .navigationtab li:hover {
+    background-color: #DF805D;
+  }
+
+/* User icon ======================================== */
+
+.header .header-user-box{
+    display: flex;
+}
+.header .user-options {
+    display: none;
+}
+
+.header #header-account{
+    color: black;
+    text-decoration: none;
+}
+.header .header-user-icon-div:hover + .user-options{
+    display: flex;
+    }
+
+
+.header .header-user-icon-div{
+    color: white;
+    font-size: 25px;
+    justify-self: center;
+  }
+
+.header  .header-user-icon-div i{
+    padding-top: 7px;
+  }
+
+  .header  #header-user{
+    display: none;
+  }
+
+  .header  .user-options{
+    /* display: block; */
+    list-style-type: none;
+    background-color: #fff;
+    position: absolute;
+    width: 100px;
+    font-size: 14px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 6px 1px #eee;
+    z-index: 99;
+    left: 0;
+  }
+
+  .header  .user-options li{
+    display: list-item;
+    text-align: left;
+    padding: 7px;
+  }
+
+  .header  .user-options li:hover{
+    background-color: #BD3213;
+    color:white;
+    font-weight: bold;
+  }
+
+  .header  .user-options #header-account:hover{
+    color:white;
+  }
+  
+  .header  #header-user:checked ~ .user-options{
+    display: block;
+  }
+
+  /* Chỉnh vị trí cho ô Đăng nhập đăng ký sát vào tài khoản */
+
+  .header    .header-user-box {
+        position: relative;
+    }
+    .header    .user-options{
+        position: absolute;
+        left: 10px;
+        top: 45px;
+    }
+
+
+  @media only screen and (max-width: 1280px) {
+    .header .inputbox-search {
+        position: relative;
+        width: 300px;
+    }
+    
+    .header .logo{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .header .logotitle{
+        height: 20px;
+        width: auto;
+        margin-left: 10px;
+    }
+    .header .logokey{
+        height: 50px;
+        width: auto;
+    }
+
+    .header .tool-group{
+        color: white;
+        font-size: 25px;
+        margin: 0px 10px 0px 10px;
+    }  
+}
+
+@media only screen and (max-width: 850px) {
+    .header .logotitle{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .header .searchbar{
+        display: flex;
+        flex-direction: row;
+    }
+    .header .search_box{
+        display: flex;
+        flex-direction: row;
+    }
+    .header .inputbox-search {
+        position: relative;
+        width: 300px;
+    }
+
+    .header .tool-group{
+        display: none;
+    }
+    
+    .header .searchbar {
+        align-items: center;
+        align-content: center;
+    }
+    .header .button_search_group {
+        margin-bottom: 6px;
+    }
+    .header .Search_Button {
+        margin-bottom: 5px;
+    }
+
+    
+
+    /* Custome menu bar thu gọn -------------------------- */
+    .header .header-menu-bar-hid{
+        display: flex;
+        
+    }
+    .header .header-format-icon-bar{
+        color: white;
+        font-size: 25px;
+        justify-self: center;
+        padding: 0px 18px 7px;
+      }
+
+      .header .header-format-icon-bar i{
+        padding-top: 7px;
+      }
+
+      .header #check-menu-header{
+        display: none;
+      }
+
+
+      .header .div-header-list-menu{
+        display: none;
+      }
+
+      .header .div-header-list-menu{
+        display: none;
+        list-style-type: none;
+        background-color: #fff;
+        position: absolute;
+        width: 180px;
+        font-size: 14px;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 6px 1px #eee;
+        z-index: 99;
+        left: 0;
+        margin-top: 47px;
+      }
+    
+      .header .div-header-list-menu li{
+        display: list-item;
+        text-align: left;
+        padding: 7px;
+      }
+      .header .div-header-list-menu li a{
+        text-decoration: none;
+        color: black;
+      }
+    
+      .header .div-header-list-menu li:hover{
+        background-color: #BD3213;
+        color:rgb(255, 255, 255);
+        font-weight: bold;
+      }
+      
+      .header #check-menu-header:checked ~ .div-header-list-menu{
+        display: block;
+      }
+      
+      /* Ẩn nav bar cũ */
+      .header .navigationbar{
+        display: none;
+      }
+}
+
+@media only screen and (max-width: 500px) {
+    .header .button_search_group{
+        min-width: 10%;
+        align-items: center;
+        vertical-align: middle;
+    }
+    .header .Search_Button{
+        position: relative;
+        width: 30px;
+        height: 32px;
+        border-style: none;
+        border-radius: 0px 5px 5px 0px;
+    }
+    .header .button_search_group i{
+        font-size: 20px;
+    }
+
+    .header .inputbox-search {
+        position: relative;
+        width: 200px;
+        height: 30px;
+        border-style: none;
+        border-radius: 5px 0px 0px 5px;
+        /* box-shadow: 2px 2px #7c7c7c; */
+    }
+    .header .button_search_group {
+        margin-top: 1px;
+    }
+
+    .header .Search_Button {
+        height: 30px;
+        margin-bottom: 1px;
+    }
+    .header .search_box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        vertical-align: middle;
+    }
+    .header .button_search_group {
+        margin-bottom: 0px;
+    }
+    .header .logo {
+        display: none;
+    }
+    .header .header-format-icon-bar {
+        padding-right: 0px ;
+        padding-left: 0px;
+        margin-top: 12px;
+    }
+   
+   
+}

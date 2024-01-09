@@ -1,0 +1,122 @@
+:root {
+    --red: #BD3213;
+    --black: #000;
+    --white: #fff;
+    --light_gray: #eceff3;
+}
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.mybody{
+    background-color: var(--light_gray);
+}
+#giohangtrong{
+    background-color: var(--light_gray);
+    display: none;
+}
+#header, #footer{
+    background-color: var(--red) ;
+    border: none;
+    text-align: center;
+}
+#header{
+    z-index: 2;
+}
+
+#header h1, #footer h1{
+    color: var(--white);
+    padding: 26px 0;
+    margin: 0;
+}
+/* -------noidung------ */
+
+.TieuDe {
+    background-color: var(--white);
+    margin-top: 10px;
+    padding: 10px 0 10px 0;
+    font-weight: bolder;
+}
+.NoiDung{
+    background-color: var(--white);
+    padding: 10px 0 10px 0;
+}
+#thanhtoan_btn:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
+.delete_btn:hover{
+    color: var(--red);
+    font-weight: bold;
+}
+.tieude{
+    font-weight: bold;
+}
+
+.soluong input{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.img_sanpham{
+    width: 70px;
+    height: 70px;
+}
+.thongtin, .thanhtoan{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type=number]
+{
+    width: 40px;
+}
+/* input [type=checkbox]{
+    width: 10px;
+} */
+.delete_btn{
+    text-decoration: none;
+    border: none;
+    background-color: var(--white);
+}
+.tensanpham, #thongbao{
+    vertical-align: middle;
+    margin: 0; 
+    text-align: center;
+    /* overflow: scroll; */
+}
+#thanhtoan_btn{
+    border: none;
+    width: 100px;
+    height: 40px;
+    background-color: var(--black);
+    color: var(--white);
+}
+.container{
+    padding-top: 130px; margin-bottom: 40px;
+}
+@media screen and (max-width: 600px) {
+    .tieudemat{
+        display: none;
+    }
+    .SanPham{
+        width: 40%;
+        font-size: 14px;
+    }
+    .thongtin{
+        width: 15%;
+        font-size: 14px;
+    }
+    .tensanpham{ 
+    vertical-align: middle;
+    margin: 0; 
+    text-align: left;
+    }
+    .container{
+        padding-top: 85px;
+        margin-bottom: 0px;
+    }
+}

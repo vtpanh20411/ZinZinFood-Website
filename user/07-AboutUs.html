@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/AboutUs.css" />
+    <title>Về ZinZin Food | ZinZin Food - Đồ ăn vặt ZinZin</title>
+    <style></style>
+</head>
+<body ng-app="angularApp">
+    <div class="header">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/headerstyle.css">
+        
+        <div class="searchbar">
+            <div class="logo">
+                <a href="02-Homepage.html"  title="Zin Zin Food"><img class="logokey" src="image/logo/whitelogo.png" alt="logo" ></a>
+                <a href="02-Homepage.html" title="Zin Zin Food"><img class="logotitle" src="image/logo/whitetitle.png" alt="logotitle" ></a>
+            </div>
+            <div class="search_box">
+            
+        <!-- Menu hidden ----------------------------------------- -->
+                <div class="header-menu-bar-hid">
+                    <input type="checkbox" id="check-menu-header">
+                    <label for="check-menu-header">
+                        <div class="header-format-icon-bar">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </div>
+                    </label>
+                    
+                <div class="div-header-list-menu">
+                    <li><a href="02-Homepage.html">Trang chủ</a></li>
+                    <li><a href="04-Account.html">Trang cá nhân</a></li>
+                        <li><a onclick="openFormLogin(); scrollToTop()">Đăng nhập</a></li>
+                        <li><a href="">Thông báo</a></li>
+                        <li><a href="09-Cart.html">Giỏ hàng</a></li>
+                    <li><a href="05-Product.html">Sản phẩm</a></li>
+                    <li><a href="07-AboutUs.html">Về Zin Zin Food</a></li>
+                    <li><a href="11-Policy.html">Chính sách & Điều khoản</a></li>
+                    <li><a href="12-Voucher.html">Ưu đãi</a></li>
+                    <!-- <li><a>Liên hệ</a></li> -->
+                    </ul>
+                    </div>
+                </div>
+    
+         <form onsubmit="submitForm(event)">
+                        <div><input class="inputbox-search" data-view-id="main_search_from_input" type="text" value placeholder="Tìm kiếm đồ ăn vặt" id="inputvalue"></div>
+                    </div> 
+                    <!-- <input data-view-id="main_search_from_button" class="Search_Button" type="submit" title="Tìm kiếm" /> -->
+                    <div class="button_search_group">
+                        <button data-view-id="main_search_from_button" class="Search_Button">
+                            <i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+                    <div id="results"></div>
+                        <script>
+                            function submitForm(event){ 
+                            event.preventDefault();
+                            var ele = document.getElementById("inputvalue");                
+                   
+                            if (ele.value +""==="bánh tráng"){window.location.replace("search_banhtrang.html")}
+                            else if (ele.value +""==="banh trang"){window.location.replace("search_banhtrang.html")}
+                            else if (ele.value +""==="bánh tráng cuộn bơ"){window.location.replace("search_banhtrangcuonbo.html")}
+                            else if (ele.value +""==="cuộn bơ"){ window.location.replace("search_banhtrangcuonbo.html")}
+                            else if (ele.value +""==="cuon bo"){window.location.replace("search_banhtrangcuonbo.html")}
+                            else if (ele.value +""==="banh trang cuon bo"){window.location.replace("search_banhtrangcuonbo.html")}
+     
+                            else if (ele.value +""==="bánh tráng phô mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                            else if (ele.value +""==="banh trang pho mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                            else if (ele.value +""==="phô mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                            else if (ele.value +""==="pho mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                            
+                            else if (ele.value +""==="bánh tráng rong biển"){ window.location.replace("search_banhtrangrongbien.html")}
+                            else if (ele.value +""==="banh trang rong bien"){ window.location.replace("search_banhtrangrongbien.html")}
+                            else if (ele.value +""==="rong biển"){ window.location.replace("search_banhtrangrongbien.html")}
+                            else if (ele.value +""==="rong bien"){ window.location.replace("search_banhtrangrongbien.html")}
+    
+                            else if (ele.value +""==="bánh tráng sa tế bò"){window.location.replace("search_banhtrangsatebo.html")}
+                            else if (ele.value +""==="banh trang sa te bo"){window.location.replace("search_banhtrangsatebo.html")}
+                            else if (ele.value +""==="sa tế bò"){window.location.replace("search_banhtrangsatebo.html")}
+                            else if (ele.value +""==="sa te bo"){window.location.replace("search_banhtrangsatebo.html")}
+                            else if (ele.value +""==="sate bò"){window.location.replace("search_banhtrangsatebo.html")}
+                            else if (ele.value +""==="sate bo"){window.location.replace("search_banhtrangsatebo.html")}
+                            else if (ele.value +""==="bò"){window.location.replace("search_banhtrangsatebo.html")}
+                            else if (ele.value +""==="bo"){window.location.replace("search_banhtrangsatebo.html")}
+                            else if (ele.value +""==="sate"){window.location.replace("search_banhtrangsatebo.html")}
+                            else if (ele.value +""==="sa tế"){window.location.replace("search_banhtrangsatebo.html")}
+                            
+                            else if (ele.value +""==="bánh tráng sa tế tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                            else if (ele.value +""==="banh trang sa te tac"){window.location.replace("search_banhtrangsatetac.html")}
+                            else if (ele.value +""==="sa tế tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                            else if (ele.value +""==="sa te tac"){window.location.replace("search_banhtrangsatetac.html")}
+                            else if (ele.value +""==="sate tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                            else if (ele.value +""==="sate tac"){window.location.replace("search_banhtrangsatetac.html")}
+                            else if (ele.value +""==="tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                            else if (ele.value +""==="tac"){window.location.replace("search_banhtrangsatetac.html")}
+        
+                            else if (ele.value +""==="bánh tráng tỏi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                            else if (ele.value +""==="banh trang toi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                            else if (ele.value +""==="tỏi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                            else if (ele.value +""==="toi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                            
+                            else if (ele.value +""==="cơm cháy khô gà"){ window.location.replace("search_comchaykhoga.html")}
+                            else if (ele.value +""==="com chay kho ga"){ window.location.replace("search_comchaykhoga.html")}
+                            else if (ele.value +""==="cơm cháy"){ window.location.replace("search_comchaykhoga.html")}
+                            else if (ele.value +""==="com chay"){ window.location.replace("search_comchaykhoga.html")}
+                            
+                            else if (ele.value +""==="khô gà lá chanh"){window.location.replace("search_khogalachanh.html")}
+                            else if (ele.value +""==="kho ga la chanh"){window.location.replace("search_khogalachanh.html")}
+                            else if (ele.value +""==="khô gà"){window.location.replace("search_khogalachanh.html")}
+                            else if (ele.value +""==="kho ga"){window.location.replace("search_khogalachanh.html")}
+    
+                            
+                            else if (ele.value +""==="khô heo giả bò"){window.location.replace("search_khoheogiabo.html")}
+                            else if (ele.value +""==="kho heo gia bo"){window.location.replace("search_khoheogiabo.html")}
+                            else if (ele.value +""==="kho heo"){window.location.replace("search_khoheogiabo.html")}
+                            else if (ele.value +""==="khô heo"){window.location.replace("search_khoheogiabo.html")}
+                            else if (ele.value +""==="khô bò"){window.location.replace("search_khoheogiabo.html")}
+                            else if (ele.value +""==="kho bo"){window.location.replace("search_khoheogiabo.html")}
+    
+                            else if (ele.value +""==="tăm que cay cay"){window.location.replace("search_tamquecaycay.html")}
+                            else if (ele.value +""==="tăm que"){window.location.replace("search_tamquecaycay.html")}
+                            else if (ele.value +""==="tam que cay cay"){window.location.replace("search_tamquecaycay.html")}
+                            else if (ele.value +""==="tam que"){window.location.replace("search_tamquecaycay.html")}
+    
+                            else if (ele.value +""==="quẩy bò zinzin"){window.location.replace("search_quaybozinzin.html")}
+                            else if (ele.value +""==="quẩy bò"){window.location.replace("search_quaybozinzin.html")}
+                            else if (ele.value +""==="quay bo zinzin"){window.location.replace("search_quaybozinzin.html")}
+                            else if (ele.value +""==="quay bo"){window.location.replace("search_quaybozinzin.html")}
+    
+                            else if (ele.value +""==="mực bento cay cay" ){window.location.replace("search_mucbentocaycay.html")}
+                            else if (ele.value +""==="mực bento" ){window.location.replace("search_mucbentocaycay.html")}
+                            else if (ele.value +""==="muc bento cay cay" ){window.location.replace("search_mucbentocaycay.html")}
+                            else if (ele.value +""==="muc bento" ){window.location.replace("search_mucbentocaycay.html")}
+                            else if (ele.value +""==="bento" ){window.location.replace("search_mucbentocaycay.html")}
+    
+                            else if (ele.value +""==="snack bò thơm cay"){window.location.replace("search_snackbothomcay.html")}
+                            else if (ele.value +""==="snack bò"){window.location.replace("search_snackbothomcay.html")}
+                            else if (ele.value +""==="snack bo thom cay"){window.location.replace("search_snackbothomcay.html")}
+                            else if (ele.value +""==="snack bo"){window.location.replace("search_snackbothomcay.html")}
+                            else if (ele.value +""==="snack"){window.location.replace("search_snackbothomcay.html")}
+                            else if (ele.value +""==="thơm cay"){window.location.replace("search_snackbothomcay.html")}
+                            else if (ele.value +""==="thom cay"){window.location.replace("search_snackbothomcay.html")}
+    
+                            else  {   window.alert("Không có kết quả tìm kiếm!");}
+    
+                    } 
+                        </script>      
+            <div class="tool-group">
+                <a href="09-Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                <i class="fa fa-bell" aria-hidden="true"></i>
+                <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+    
+                <div class="header-user-box">
+                    <input type="checkbox" id="header-user">
+                    <label for="header-user">
+                        <div class="header-user-icon-div">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                    </label>             
+                    <div class="user-options">
+                            <li ><a href="04-Account.html" id="header-account">Cá nhân</a></li>
+                            <li><a onclick="openFormLogin(); scrollToTop()">Đăng nhập</a></li>
+                            <!-- <li><a>Đăng xuất</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    
+        <div class="navigationbar">
+            <ul class="navigationtab">
+                <li><a href="02-Homepage.html">Trang chủ</a></li>        
+                <li><a href="05-Product.html">Sản phẩm</a></li>
+                <li><a href="07-AboutUs.html">Về Zin Zin Food</a></li>
+                <li><a href="11-Policy.html">Chính sách & Điều khoản</a></li>
+                <li><a href="12-Voucher.html">Ưu đãi</a></li>
+                        <!-- <li><a>Liên hệ</a></li> -->
+            </ul>
+        </div>
+    </div> 
+    <link rel="stylesheet" href="css/loginsignup.css">
+    <div onclick="doitab()" style="display: none;" id="tab-container1">
+        <div id="tab" class="tab">
+            <i style="display: none;" id="top"></i>
+            <i onclick="closeFormLogin()" class="form-close fas fa-times" id="btncancel"></i>
+            <!--Bắt Đầu Phần Tab Header-->
+            <div class="tab-header">
+                <div class="active" id="login-header"><i class="login__form"></i><b>ĐĂNG NHẬP</b></div>
+                <div></div>
+                <div id="register-header"><i class="register__form"></i><b>ĐĂNG KÝ</b></div>
+            </div>
+            <!--Kết Thúc Phần Tab Header-->
+            <div id="indicator" class="tab-indicator"></div>
+             <!--Bắt Đầu Phần Tab Body-->
+            <div class="tab-body">
+                <div id="login" class="active" role="tabpanel">
+                    <form onsubmit="LogIn()" id="login-form" class="login__form-login" method="post">
+                        <h3>ĐĂNG NHẬP TÀI KHOẢN</h3>
+                        <p class="sub-title">Vui lòng nhập thông tin tài khoản để đăng nhập.</p>
+                        <table class="login-with-social">
+                            <td><button type="button" class=login-with-facebook-button>
+                                <a href="https://www.facebook.com/" class="login__btn">
+                                    <span class="login__btn-image">
+                                        <img src="image/Login/facebook.png" width="20px" height="20px"  alt="" class="login__btn-logo">
+                                    </span>
+                                    <span class="login__btn-text">Facebook</span>
+                                </a>
+                            </button></td>
+                            <td><button type="button" class=login-with-google-button>
+                                <a href="https://www.google.com/" class="login__btn"> 
+                                    <span class="login__btn-image">
+                                        <img src="image/Login/google.png" alt="" width="20px" height="20px" class="login__btn-logo">
+                                    </span>
+                                    <span class="login__btn-text">Google</span>
+                                </a>
+                            </button></td>
+                        </table>
+                        <input id="username" class="login__form-input" type="text" placeholder="Email hoặc Số điện thoại" autofocus><br>
+                        <div class="login__form-wrapper">
+                            <input class="login__form-input" type="password" placeholder="Mật khẩu" id="password">
+                            <i onclick="togglepass()" id="showbtn" class=" fas fa-eye" aria-hidden="true" fill="none"></i>
+                        </div>
+                        <p class="login-LostPassword lost_password"><a style="text-decoration:underline; cursor: pointer;" onclick="openFormForgot()" id="linkforgotpassword">Quên mật khẩu </a></p>
+                        <button class="login__form-submit" id="btnlogin" name="btnlogin" type="submit">Đăng nhập</button>
+                        <p class="login__form-admin"><a style="text-decoration:underline; cursor: pointer;" href="#down">Đăng nhập tài khoản admin</a></p>
+                    </form>
+                </div>
+    
+               <div id="register" role="tabpanel">
+                    <form onsubmit="Register()" id="register-form" class="register__form-register" method="post">
+                        <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+                        <p class="sub-title">Vui lòng nhập thông tin của bạn để đăng ký.</p>
+                        <div class="register__form-wrapper">
+                            <span>*<input class="register__form-input" type="text" placeholder="Địa chỉ email" id="resemail" autofocus></span>
+                        </div>
+                        <div class="register__form-wrapper">
+                            <span>*<input class="register__form-input" type="text" placeholder="Số điện thoại" id="resphone"></span>
+                        </div>
+                        <div class="register__form-wrapper">
+                            <span>*<input class="register__form-input" type="password" placeholder="Mật khẩu" id="respassword"/></span>
+                            <i onclick="togglepass1()" id="showbtn1" class="fas fa-eye" aria-hidden="true" fill="none"></i>
+                        </div>
+                        <div class="register__form-wrapper">
+                            <span>*<input class="register__form-input" type="password" placeholder="Xác nhận mật khẩu" id="passwordagain"/></span>
+                            <i onclick="togglepass2()" id="showbtn2" class="fas fa-eye" aria-hidden="true" fill="none"></i>
+                        </div>
+                        <p class="register-AgreedLicense"><input type="checkbox" name="agreedlicense" required> Đã xác nhận <a style="text-decoration:underline; cursor: pointer;" href="11-Policy.html">các điều khoản chính sách</a> của ZinZin Food.</p>
+                        <button class="register__form-submit" id="btnregister" name="btnregister" type="submit">Đăng ký</button>
+                    </form>
+                </div>            
+            </div>    
+            <!--Kết Thúc Phần Tab Body-->
+            <i id="down"></i>
+            <div id="adminlogin" class="admin-login">
+                <i onclick="closeFormLogin()" class="form-cancel fas fa-times" id="btncancel"></i>
+                <div class="tab-header"><div><i class="forgotpassword__form"></i><b>ĐĂNG NHẬP</b></div></div>
+                <Center><div class="tab-indicator"></div></Center>
+                <div class="tab-body">
+                    <form onsubmit="AdminLogIn()" id="admin-login-form" class="login__form-adminlogin" method="get">
+                        <h3>ĐĂNG NHẬP ADMIN</h3>
+                        <p class="sub-title">Vui lòng nhập thông tin tài khoản admin để đăng nhập.</p>
+                        <input id="adminusername" class="login__form-input" type="text" placeholder="Email hoặc Số điện thoại" autofocus><br>
+                        <div class="login__form-wrapper">
+                            <input class="login__form-input" type="password" placeholder="Mật khẩu" id="adminpassword">
+                            <i onclick="togglepass3()" id="showbtn3" class=" fas fa-eye" aria-hidden="true" fill="none"></i>
+                        </div>
+                        <p class="login-LostPassword lost_password"><a style="text-decoration:underline; cursor: pointer;" onclick="openFormForgot()" id="linkforgotpassword">Quên mật khẩu </a></p>
+                        <button class="login__form-submit" id="btnadminlogin" name="btnlogin" type="submit">Đăng nhập</button>
+                        <p class="login__form-admin"><a style="text-decoration:underline; cursor: pointer;" onclick="returnlogin()" href="#top">Đăng nhập tài khoản khách hàng</a></p>                  
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <link rel="stylesheet" href="css/forgotpassword.css">
+    <div style="display: none;" id="tab-container2">
+        <div class="tab1">
+            <input type="checkbox" id="check">
+            <i onclick="closeFormForgot()" class="fas fa-times" id="btncancel"></i>
+            <div id="forgotpassword" class="forgot-password">
+                <div class="tab-header1"><div><i class="forgotpassword__form"></i><b>QUÊN MẬT KHẨU</b></div></div>
+                <Center><div class="tab-indicator1"></div></Center>
+                <form action="#" onsubmit="Forgot()" class="forgotpassword__form-forgotpassword" method="post">
+                    <h3>QUÊN MẬT KHẨU</h3>
+                    <p class="sub-title">Vui lòng nhập địa chỉ email hoặc số điện thoại đã đăng ký. Chúng tôi sẽ gửi đến bạn liên kết thay đổi mật khẩu.</p>
+                    <input class="forgotpassword__form-input" type="text" placeholder="Địa chỉ email" id="foremail" autofocus><br>
+                    <button type="submit" class="forgotpassword__form-submit" id="btnsend">Gửi</button>
+                    <label id="forcheck" style="display: none;" for="check"></label>
+                </form>
+            </div>
+            <div id="resetpassword" class="reset-password">
+                <div class="tab-header1"><div><i class="resetpassword__form"></i><b>ĐỎI MẬT KHẨU</b></div></div>
+                <Center><div class="tab-indicator1"></div></Center>
+                <form onsubmit="Reset()" class="resetpassword__form-resetpassword" method="get">
+                    <h3>ĐỔI MẬT KHẨU</h3>
+                    <p class="sub-title">Bạn vui lòng nhập mật khẩu mới để tiến hành đổi mật khẩu. Hãy bảo đảm mật khẩu mới đủ mạnh và có ít nhất 8 ký tự.</p>
+                    <div class="resetpassword__form-wrapper">
+                        <input class="resetpassword__form-input" type="password" placeholder="Mật khẩu mới" id="forpassword"/>
+                        <i onclick="togglepass4()" id="showbtn4" class="fas fa-eye" aria-hidden="true" fill="none"></i>
+                    </div>
+                    <div class="resetpassword__form-wrapper">
+                        <input class="resetpassword__form-input" type="password" placeholder="Xác nhận mật khẩu mới" id="forpasswordagain"/>
+                        <i onclick="togglepass5()" id="showbtn5" class="fas fa-eye" aria-hidden="true" fill="none"></i>
+                    </div>
+                    <button type="submit" class="resetpassword__form-submit" id="btnsend">Đổi mật khẩu</button>
+                    <div class="resent"><label for="check">Gửi lại liên kết</label></div>
+                </form>
+            </div>    
+        </div>
+    </div>
+    <div class="body">
+        <div class="Introduce--Title">
+            <i><h1>VỀ ZINZIN FOOD - ĐỒ ĂN VẶT ZINZIN</h1></i>
+            <span class="Introduce--Title-content">
+                <p>ZinZin Food là thương hiệu đồ ăn vặt được thành lập bởi nhóm sinh viên khoa Hệ Thống Thông Tin, Trường Đại học Kinh tế - Luật. ZinZin Food hướng tới trở thành một thương hiệu đồ ăn vặt hàng đầu Việt Nam về chất lượng và uy tín hứa hẹn mang đến những sản phẩm đồ ăn vặt ngon, chất lượng và tiện dụng trên thị trường Việt.</p>
+                <p>Sản phẩm đồ ăn vặt ZinZin được sản xuất theo quy trình đạt chuẩn, vệ sinh sạch sẽ. Bên cạnh đó, chúng tôi luôn chú trọng đến nhu cầu về khẩu vị, sự tiện lợi và giá cả của khách hàng nhằm mang đến những sản phẩm chất lượng và trải nghiệm tuyệt vời nhất dành cho họ. Mỗi một sản phẩm, chúng tôi luôn chăm chút về mặt thiết kế bao bì để gây ấn tượng với khách hàng. ZinZin hiện đang có mặt và phủ sóng trên các phương tiện truyền thông mạng xã hội như Fanpage Facebook, Tiktok, Landing Page, Group/Forum và Email.</p>
+            </span>
+            <div class="Introduce--Title-image"><img src="image/AboutUs/Red ver 1-01.png" title="Logo ver red"></img></div>
+        </div>
+        <div id="Introduce--Brand" class="Introduce--Brand">
+            <i><h2>BỘ NHẬN DIỆN CỦA ZINZIN FOOD</h2></i>
+            <hr>
+            <div class="Introduce--Brand-content">
+                <h3>Nguồn gốc cái tên ZinZin Food</h3>
+                <p>ZinZin Food được lấy cảm hứng từ nhân vật hoạt hình ZinZin, mang tinh thần nhanh nhẹn, tươi tắn và tràn đầy sức sống. Điều này khá tương đồng với tâm trạng mà đồ ăn vặt có thể đem lại cho mọi người khi thưởng thức, những món ăn mang hương vị gây mê mạnh mẽ cùng với mức giá phải chăng. Bên cạnh đó, ZinZin cũng thể hiện cho sự nhanh chóng, tiện lợi về chất lượng phục vụ của doanh nghiệp với những sản phẩm đồ ăn vặt luôn tươi mới và đảm bảo.</p>
+                <h3>Slogan của ZinZin Food</h3>
+                <p>“Giòn giòn tròn vị cùng ZinZin” - Slogan bắt tai người nghe, người đọc, gây hứng thú cho khách hàng khi nhắc đến thương hiệu của mình. “Giòn giòn tròn vị” tượng trưng có hương vị của đồ ăn vặt mà chúng tôi muốn đem đến cho khách hàng.</p>
+                <h3>Logo ZinZin Food</h3>
+                <p>Logo ZinZin Food được thiết kế với màu chủ đạo là đỏ trắng. Màu đỏ vốn là một gam màu nóng và dễ thu hút ánh nhìn của tất cả mọi người, gợi cho người xem cảm giác thèm ăn và đây cũng chính là điều ZinZin mong muốn. Bên cạnh đó, sắc đỏ cũng thể hiện cho những món ăn rực cháy vị ngon của nhà Zin, sức hấp dẫn mà quý khách hàng phải mong đợi. Hình vẽ trên Logo là một cô đầu bếp nhỏ với cảm xúc hài lòng, thể hiện rằng tại ZinZin, chúng tôi sẽ đem đến cho quý khách hàng những trải nghiệm tuyệt vời, không chỉ về chất lượng mà còn về thái độ phục vụ. ZinZin Food sẽ luôn rực cháy hết mình với mọi thứ mà chúng tôi mang lại.</p>
+            </div>
+            <div class="Introduce--Brand-image"><img src="image/AboutUs/White ver 02.png" title="Logo ver white"></img></div>
+        </div>
+        <div id="Introduce--Value" class="Introduce--Value">
+            <i><h2>GIÁ TRỊ THƯƠNG HIỆU ZINZIN FOOD</h2></i>
+            <hr>
+            <table class="Table-Introduce--Value" cellpadding="10px" cellspacing="30px">
+                <td class="Table-Introduce--Value-content">
+                    <div class="container_vision">
+                        <div class="content_1">
+                            <div class="title">
+                                <h3>Tầm nhìn</h3>
+                            </div>
+                            <div class="nd">
+                                ZinZin Food hướng tới trở thành một thương hiệu đồ ăn vặt hàng đầu Việt Nam về chất lượng và uy tín.
+                            </div>
+                        </div>
+                        <div class="content_1">
+                            <div class="title">
+                                <h3>Sứ mệnh</h3>
+                            </div>
+                            <div class="nd">
+                                Sứ mệnh của ZinZin Food là tạo ra những món ăn vặt ngon, chất lượng và tiện dụng. ZinZin Food cung cấp các thực phẩm an toàn, thơm ngon, dinh dưỡng, tiện lợi và độc đáo cho tất cả mọi người để luôn giữ vị trí hàng đầu trên thị trường thực phẩm.
+                            </div>
+                        </div>
+                        <div class="content_1">
+                            <div class="title">
+                                <h3>Giá trị cốt lõi</h3>
+                            </div>
+                            <div class="nd">
+                                <ul>
+                                    <li>
+                                        <span><b>Minh bạch & Chính trực: </b></span>
+                                        <span>Minh bạch, chính trực trong ứng xử và giao dịch.</span>
+                                    </li>
+                                    <li>
+                                        <span><b>Sáng tạo & Đổi mới: </b></span>
+                                        <span>Cập nhật nhanh xu thế và luôn luôn sáng tạo, đổi mới để có thể tạo ra những sản phẩm bắt kịp với những xu hướng của khách hàng.</span>
+                                    </li>
+                                    <li>
+                                        <span><b>Chất lượng: </b></span>
+                                        <span>Sản phẩm chất lượng, vệ sinh sạch sẽ.</span>
+                                    </li>
+                                    <li>
+                                        <span><b>Tận Tâm & Tôn trọng: </b></span>
+                                        <span>Luôn tận tâm, tôn trọng khách hàng, hỗ trợ đồng nghiệp.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>  
+                </td>
+            </table>
+            <div class="Introduce--Value-value">
+                <table class="Table-Introduce--Value-value" align="center">
+                    <tr align="center">
+                        <div>
+                            <tbody>
+                                <td>
+                                    <img src="image/AboutUs/minhbach.png" title="Minh bạch">
+                                    <br>Minh bạch & Chính trực
+                                </td>
+                                <td>
+                                    <img src="image/AboutUs/sangtao.png" title="Sáng tạo">
+                                    <br>Sáng tạo & Đổi mới
+                                </td>
+                            </tbody>
+                            <tbody>
+                                <td>
+                                    <img src="image/AboutUs/chatluong.png" title="Chất lượng">
+                                    <br>Chất lượng
+                                </td>
+                                <td>
+                                    <img src="image/AboutUs/tantam.png" title="Tận tâm">
+                                    <br>Tận Tâm & Tôn trọng
+                                </td> 
+                            </tbody>  
+                        </div>
+                    </tr>                  
+                </table>
+            </div>
+        </div>
+        <div id="Introduce--Service" class="Introduce--Service">
+            <i><h2>ZINZIN FOOD CÓ GÌ?</h2></i>
+            <hr>
+            <div class="Introduce--Service-content">
+                <h3>Đồ ăn vặt ZinZin Food</h3>
+                <p>Dòng sản phẩm mà ZinZin Food lựa chọn kinh doanh chính là các sản phẩm đồ ăn vặt Ngon - Giòn - Bổ - Rẻ, được chia thành 4 nhóm sản phẩm chính:</p>
+                <div class="Introduce--Product-content">
+                    <table class="Table-Introduce--Product" align="center">
+                        <tr class="Table--Product" align="center">
+                            <div>
+                                <tbody>
+                                    <td>
+                                        <p>Bánh tráng các loại</p>
+                                        <img style="border: 5px solid #ffffff;" src="image/AboutUs/banhtrang.jpg" title="Bánh tráng các loại"></img><br>
+                                        <button type="button"><a href="bánh tráng các loại.html">Xem Thêm</a></button>
+                                    </td>
+                                    <td>
+                                        <p>Cơm cháy các loại</p>
+                                        <img style="border: 5px solid #ffffff;" src="image/AboutUs/comchay.jpg" title="Cơm cháy các loại"></img><br>
+                                        <button type="button"><a href="cơm cháy các loại.html">Xem Thêm</a></button>
+                                    </td>
+                                </tbody>
+                                <tbody>
+                                    <td>
+                                        <p>Khô thịt các loại</p>
+                                        <img style="border: 5px solid #ffffff;" src="image/AboutUs/khothit.jpg" title="Khô thịt các loại"></img><br>
+                                        <button type="button"><a href="khô thịt các loại.html">Xem Thêm</a></button>
+                                    </td>
+                                    <td>
+                                        <p>Đồ ăn vặt nội địa</p>
+                                        <img style="border: 5px solid #ffffff;" src="image/AboutUs/noidiatrung.jpg" title="Đồ ăn vặt nội địa"></img><br>
+                                        <button type="button"><a href="đồ ăn vặt nội địa.html">Xem Thêm</a></button>
+                                    </td>
+                                </tbody>
+                            </div>
+                        </tr>
+                    </table>
+                </div>
+                <div class="Introduce--Payment-content">
+                    <h3>Dịch vụ thanh toán</h3>
+                    <table class="Table-Introduce--Payment" id="service" align="center">
+                        <td><img style="margin-right: 10px;" class="Table-Introduce--Payment-image" src="image/AboutUs/payment.png" title="Dịch vụ thanh toán"></img></td>
+                        <td class="Table-Introduce--Payment-content">
+                            <p>Bên cạnh hình thức thanh toán trực tiếp bằng tiền mặt, ZinZin còn hỗ trợ các khách hàng thanh toán trực tiếp trên các nền tảng website, tiktok shop, facebook với đa dạng các hình thức thanh toán trực tuyến thông dụng và tiện lợi như chuyển khoản qua ngân hàng, ví điện tử,... nhằm tăng mức độ tiện lợi, nhanh chóng của dịch vụ, tối đa hóa được trải nghiệm mua sắm của khách hàng.</p>
+                            <button type="button"><a href="11-Policy.html">Xem thêm chính sách</a></button>
+                        </td>                       
+                    </table>
+                </div>
+                <div class="Introduce--Deliverly-content">
+                    <h3>Dịch vụ vận chuyển</h3>
+                    <table class="Table-Introduce--Deliverly" id="service" align="center">
+                        <td>
+                            <p>ZinZin hợp tác với nhiều kênh vận chuyển thứ ba phổ biến và có mức độ uy tín cao như Viettel Post, Giao hàng nhanh, Giao hàng tiết kiệm,... để đáp ứng nhu cầu mua hàng của người tiêu dùng trên khắp các tỉnh thành cả nước, đồng thời đảm bảo và cam kết hàng được đóng gói cực kỳ cẩn thận, kỹ càng để sản phẩm đến tay khách hàng giữ nguyên hình dạng, không bị hư hỏng.</p>
+                            <button type="button"><a href="11-Policy.html">Xem thêm chính sách</a></button>
+                        </td>
+                        <td class="Table-Introduce--Deliverly-content">
+                            <img style="margin-left: 10px;" class="Table-Introduce--Deliverly-image" src="image/AboutUs/deliverly.png" title="Dịch vụ vận chuyển"></img>
+                        </td>                       
+                    </table>
+                </div>
+                <div class="Introduce--Customer-content">
+                    <h3>Dịch vụ chăm sóc khách hàng</h3>
+                    <table class="Table-Introduce--Customer" id="service" align="center">
+                        <td><img style="margin-right: 10px;" class="Table-Introduce--Customer-image" src="image/AboutUs/customer.png" title="Dịch vụ vận chuyển"></img></td>
+                        <td class="Table-Introduce--Customer-content">
+                            <p>Đội ngũ nhân viên của ZinZin luôn túc trực và phản hồi nhanh chóng 24/7 thông qua
+                                mọi nền tảng mạng xã hội như email, hotline, chatbox trên Facebook, Tiktok, Website. ZinZin tự tin vào đội ngũ nhân viên được đào tạo chuyên nghiệp vì trải nghiệm của khách hàng, tôn trọng, quan tâm, đặt khách hàng làm trung tâm, mọi phàn nàn và nguyện vọng của khách hàng đều được ZinZin Food ghi nhận và giải quyết trong thời gian sớm nhất.</p>
+                            <button type="button"><a href="11-Policy.html">Xem thêm chính sách</a></button>
+                        </td>                       
+                    </table>
+                </div>
+            </div>            
+        </div>
+        <div class="Introduce--Human">
+            <i><h2>ĐỘI NGŨ NHÂN VIÊN ZINZIN FOOD</h2></i>
+            <hr>
+            <div class="Introduce--Human-content">
+                <p>Đội ngũ nhân sự của ZinZin Food là những con người trẻ năng động đầy hoài bão mong muốn đem đến cho mọi người những trải nghiệm tuyệt vời nhất với các sản phẩm và dịch vụ của ZinZin. ZinZin Food tự hào và tin tưởng vào đội ngũ nhân viên tuyệt vời của mình sẽ luôn không ngừng nỗ lực nâng cao chất lượng những sản phẩm và dịch vụ hiện có, đồng thời nghiên cứu và sản xuất thêm đa dạng các loại sản phẩm chất lượng khác nhằm đáp ứng nhu cầu và thúc đẩy trải nghiệm của khách hàng.</p>
+                <table class="Table-Introduce--Human" align="center">
+                    <tr align="center">
+                        <div>
+                            <tbody>
+                                <td>
+                                    <img class="Table-Introduce--Human-image" src="image/AboutUs/thuylinhne.jpg" title="Thùy Linh"></img>
+                                    <br>Thùy Linh
+                                </td>
+                                <td>
+                                    <img class="Table-Introduce--Human-image" src="image/AboutUs/ngoctram.jpg" title="Ngọc Trâm"></img>
+                                    <br>Ngọc Trâm
+                                </td>
+                                <td>
+                                    <img class="Table-Introduce--Human-image" src="image/AboutUs/phuonganh.jpg" title="Phương Anh"></img>
+                                    <br>Phương Anh
+                                </td>
+                            </tbody>
+                            <tbody>
+                                <td>
+                                <img class="Table-Introduce--Human-image" src="image/AboutUs/thuyan.jpg" title="Thúy An"></img>
+                                <br>Thúy An
+                            </td>
+                            <td>
+                                <img class="Table-Introduce--Human-image" src="image/AboutUs/thanhbinh.jpg" title="Thanh Bình"></img>
+                                <br>Thanh Bình
+                            </td>
+                            </tbody>
+                        </div>
+                    </tr>
+                </table>
+            </div>
+            <h3 style="text-align: center; color:#BD3213; font-weight:bold; margin: 40px 0px;"><i style="font-size: 25px;" class="fas fa-quote-left"></i>  ZinZin Food hân hạnh được phục vụ quý khách.  <i style="font-size: 25px;" class="fas fa-quote-right"></i></h3>
+        </div>
+    </div>
+    <div class="footer">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/footerstyle.css">
+        <script src="javascript/login.js"></script>
+        <script src="javascript/footer.js"></script>
+
+        <div class="submission_area">
+            <div class="text_guide">
+                <div class="title">Đăng ký theo dõi</div>
+                <div class="content">Đừng bỏ lỡ hàng ngàn sản phẩm và khuyến mãi cực hấp dẫn.</div>
+            </div>
+            <div class="box_input_group">
+                <input id="input-email" class="inputbox" type="text" placeholder="Nhập email của bạn...">
+                <input class="submit" type="submit" value="Đăng ký" onclick="ValidateEmail()" >
+            </div>
+        </div>
+
+        <div class="footer_content_area">
+            <div class="about_zinzin_area">
+                <div class="about_zinzin_texttitle">VỀ ZIN ZIN FOOD</div>
+                <ul class="about_zinzin_detail">
+                    <li><a>CÁC CÂU HỎI THƯỜNG GẶP</a></li>
+                    <li><a>GỬI YÊU CẦU HỖ TRỢ</a></li>
+                    <li><a>HƯỚNG DẪN ĐẶT HÀNG</a></li>
+                    <li><a href="11-Policy.html">PHƯƠNG THỨC VẬN CHUYỂN</a></li>
+                    <li><a href="11-Policy.html">CHÍNH SÁCH ĐỔI TRẢ</a></li>
+                    <li><a href="11-Policy.html">HỖ TRỢ KHÁCH HÀNG: HOTRO@ZINZIN.VN</a></li>
+                    <li><a href="11-Policy.html">BÁO LỖI BẢO MẬT SECURITY@ZINZIN.VN</a></li>
+                </ul>
+            </div>
+
+            <div class="payment_area">
+                <div class="payment_texttitle">PHƯƠNG THỨC THANH TOÁN</div>
+                <ul class="payment_detail">
+                    <li class="visa"><a><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+                    <li class="momo"><a><img src="image/footer/momo1.png" alt="momo"></a></li>
+                    <li class="bank"><a><i class="fa fa-university" aria-hidden="true"></i></a></li>
+                    <li class="cash"><a><i class="fa fa-money" aria-hidden="true"></i></a></li>
+                    
+                </ul>
+
+                <div class="footer_credit_area">
+                    <div class="logo_credit">
+                        <img class="logo-footer" src="image/logo/whitelogo.png" alt="logo">
+                        <img src="image/footer/credit.png" alt="BoCongThuong">
+                    </div>
+                    <div class="credit_bytext">COPYRIGHT 	&#169; 2022 ZIN ZIN FOOD ALL RIGHT RESESERVED</div>
+                    
+                </div>
+            </div>
+
+            <div class="Col3_connect_app">
+                <div class="connect_area">
+                    <div class="connect_us_texttitle">KẾT NỐI VỚI CHÚNG TÔI</div>
+                    <ul class="social_media_detail">
+                        <li class="facebook"><a href="https://www.facebook.com/ZinZinFoodst"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                        <li class="tiktok"><a href="https://www.tiktok.com/@zinzinfood"><img src="image/footer/tiktok.png" alt="tiktok"></a></li>
+                        <li class="email"><a href="zinzinfood.contact@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="download_app_area">
+                    <div class="download_app_texttitle">TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI DI ĐỘNG</div>
+                    <ul class="download_app_detail">
+                        <li><a><img src="image/footer/qr.png" alt="qrcode"></a></li>
+                        <li><a><img src="image/footer/gg_play.png" alt="chplay"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-4-message">
+            
+                <div class="chat_area">
+                    <i><img src="image/footer/messenger.png" alt="messenger" ></i>
+                </div>
+                <div class="fwd_area" onclick="scrollToTop()">
+                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="javascript/login.js">
+</script>
+</html>

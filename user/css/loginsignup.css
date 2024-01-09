@@ -1,0 +1,311 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tab-container1 {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+.tab {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 450px;
+    max-height: 450px;
+    height: 100%;
+    background: #ffffff;
+    padding: 20px 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+    0 2px 2px rgba(0,0,0,0.12),
+     0 4px 4px rgba(0,0,0,0.12),
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
+}
+.fa-times {
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    width: 22px;
+    height: 22px;
+    padding: 6px;
+    margin-inline-start: 95%;
+    align-items: center;
+    justify-content:center;
+    color: #ffffff;
+    background-color: #BD3213;
+    font-size: 18px;
+}
+.tab .tab-header{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.tab .tab-header > div{
+    width: calc(100% / 2);
+    text-align: center;
+    color: #888888;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+}
+.tab .tab-header > div > i {
+    display: block;
+    margin-bottom: 5px;
+}
+.tab .tab-header > div.active{
+    color: #BD3213;
+}
+.tab .tab-indicator {
+    position: relative;
+    width: 25%;
+    height: 5px;
+    background: #BD3213;
+    left: 0px;
+    border-radius: 5px;
+    transition: all 300ms ease-in-out;
+}
+.tab .tab-body{
+    position: relative;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px 5px;
+    align-items: center;
+}
+.tab .tab-body > div:first-child{
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 200ms ease-in-out 0ms,
+                transform 300ms ease-in-out 0ms;
+}
+.tab .tab-body > div:nth-child(2){
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    justify-content: center;
+    transform: scale(0.9);
+    transition: opacity 200ms ease-in-out 0ms,
+                transform 300ms ease-in-out 0ms;
+}
+.tab .tab-body > div.active{
+    top: 0px;
+    opacity: 1;
+    transform: scale(1);
+    margin-top: 0px;
+}
+.tab .tab-body > div > form > div {
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.tab .tab-body i {
+    display: inline;
+    margin-left: -30px;
+    cursor: pointer;
+    width: 0px;
+}
+.tab .tab-body i.hide-btn::before{
+    content: "\f070";
+}
+.tab .tab-body h3{
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+.tab .tab-body p{
+    text-align: center;
+}
+.tab .tab-body input{
+    height: 30px;
+    width: 100%;
+    padding: 0 5px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+}
+#btnlogin{
+    background-color: #BD3213;
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: space-between;
+    color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+}
+.tab .tab-body > div > form > button{
+    background-color: #BD3213;
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-content: space-between;
+    color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+}
+
+.tab .tab-body table {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.tab .tab-body td {
+    color: #000000;
+    width: calc(100%/2);
+    justify-content: center;
+    border: 0;
+    padding: 0px 10px;
+    outline: 0;
+  }
+.login-with-social button {
+    width: 100%;
+}
+  .tab .tab-body .login-with-social a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+
+}
+.login-with-facebook-button {
+    background-color: #3b5998;
+    border-radius: 10px;
+    height: 40px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+.login-with-social .login-with-google-button {
+    background-color:#BD3213;
+    border-radius: 10px;
+    height: 40px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+.tab .tab-body .login-LostPassword.lost_password{
+    text-decoration: none;
+    text-align: right;
+    margin-bottom: 8px;
+    margin-top: -5px;
+}
+.tab .tab-body .login-LostPassword.lost_password a{
+    color: #BD3213;
+    font-weight: bold;
+}
+.tab .tab-body .login__form-admin {
+    margin-top: 10px;
+    text-align: center;            
+}
+.tab .tab-body .login__form-admin a {
+    color: #BD3213;
+    font-weight: bold;
+}
+.tab .tab-body .register-AgreedLicense {
+    margin-bottom: 8px;
+    width: 100%;
+    margin-top: 0px;
+    text-align: justify;
+}
+.tab .tab-body .register-AgreedLicense input {
+    width: 14px;
+    height: 14px;
+}
+.tab .tab-body .register-AgreedLicense a {
+    color: #BD3213;
+    font-weight: bold;
+}
+.register__form-wrapper span {
+    color:#BD3213;
+    text-align: center;
+    justify-content: center;
+    margin-left: -10px;
+}
+.register__form-input {
+    width: 100%;
+}
+.admin-login {
+    height: calc(100% - 40px);
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.admin-login .tab-header {
+    height: 40px;
+    display: flex;
+    align-items: center;  
+}
+.admin-login .tab-header div{
+    width: 100%;
+    text-align: center;
+    color: #BD3213;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    outline: none;
+}
+.admin-login .tab-body button {
+    background-color: #BD3213;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    border: 0;
+    outline: 0;
+}
+.admin-login .tab-indicator {
+    position: relative;
+    width: 50%;
+    height: 5px;
+    background: #BD3213;
+    border-radius: 5px;
+}
+#top {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 500px) {
+    #tab-container1 {
+        width: 100%;
+        height: 100%;
+    }
+    .tab{
+        width: 95%;
+        font-size: 13px;
+    }
+    .login-with-social tbody {
+        display: block;
+    }
+    .login-with-social tr {
+        display: flex;
+    }
+}

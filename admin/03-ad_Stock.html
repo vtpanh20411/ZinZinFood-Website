@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="angular/angular.min.js"></script>
+    <title>Hàng tồn kho | ZinZin Food - Đồ ăn vặt ZinZin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-----------------------------------------sidebar + header css-------------------------------------->
+    <link rel="stylesheet" type="text/css" href="css/ad_Sidebar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/ad_Stock.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style></style>
+</head>
+<body ng-app="angularApp" ng-controller="StockController" class="mybody">
+    <!---------------------------SIDEBAR-------------------------->
+    <input type="checkbox" id="check" />
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="image/Stock/White ver 02.png" width="80" height="70" />
+        </div>
+        <div id="dropdown-sidenav" class="dropdown-sidenav">
+            <a href="01-ad_Dashboard.html"><i class="fas fa-columns" style="margin-right:10px;"></i>Dashboard</a>
+            <a href="06-ad_User.html"><i class="fas fa-user" style="margin-right:10px;"></i>Người dùng</a>
+            <a href="05-ad_Review.html"><i class="fas fa-comments" style="margin-right:10px;"></i>Đánh giá</a>
+            <button class="dropdown_btn"><i class="fas fa-cube" style="margin-right:10px;"></i>Sản phẩm<i class="fas fa-caret-down"></i></button>
+            <div class="dropdown-container">
+                <a href="02-ad_Product.html">Danh sách</a>
+                <a href="03-ad_Stock.html">Kho hàng</a>
+            </div>
+            <a href="04-ad_Order.html"><i class="fas fa-shopping-cart" style="margin-right:10px;"></i>Đơn hàng</a>
+            <a href="07-ad_Delivery.html"><i class="fas fa-truck" style="margin-right:10px;"></i>Vận chuyển</a>
+            <a href="08-ad_Invoice.html"><i class="fas fa-file-alt" style="margin-right:10px;"></i>Hóa đơn</a>
+            <a href="09-ad_Marketing.html"><i class="fas fa-bullhorn" style="margin-right:10px;"></i>Marketing</a>
+            <a href="#"><i class="fas fa-gear" style="margin-right:10px;"></i>Cài đặt</a>
+            <a href="../user/02-Homepage.html"><i class="fas fa-times-circle" style="margin-right:10px;"></i>Đăng xuất</a>
+            <br/>
+        </div>
+    </div>
+    <!---------------------------CONTENT-------------------------->
+    <div class="content">
+        <!--------------------------HEADER-------------------------->
+        <div class="header">
+            <div class="user">
+                <a href="#" style="text-decoration: none; color:#fff;"><i class="fas fa-bell"></i></a>
+                <a href="#" style="text-decoration: none; color:#fff;"><i class="fas fa-user-circle" style="margin-right:10px;"></i>ZinZin Food</a>
+            </div>
+        </div>
+        <!-----------------MY CONTENT: STOCK--------------------->
+        <div class="container_Products">
+            <a class="title">Hàng tồn kho</a>
+            <!-----------------HEADER BOX--------------------->
+            <div class="box_container">
+                <div class="box_1" style="margin: 10px 10px 10px 0px;">
+                    <p class="box_1_tittle">Tổng sản phẩm</p>
+                    <p class="box_1_number">14</p>
+                </div>
+                <div class="box_1" style="margin: 10px 10px 10px 0px;">
+                    <p class="box_1_tittle">Tổng hàng tồn</p>
+                    <p class="box_1_number">189</p>
+                </div>
+                <div class="box_1" style="margin: 10px 10px 10px 0px;">
+                    <p class="box_1_tittle">Tổng hàng đã bán</p>
+                    <p class="box_1_number">0</p>
+                </div>
+                <div class="box_1" style="margin: 10px 0px 10px 0px;">
+                    <p class="box_1_tittle">Tổng giá trị kho</p>
+                    <p class="box_1_number">1.584.000</p>
+                </div>
+            </div>
+            <!--------------------------TABLE LIST PRODUCT---------------------------------->
+            <div class="content_Products">
+                <table class="btn_Products">
+                    <tbody>
+                        <td class="btn_Products_box">
+                            <div class="filter_box">
+                                <i class="fas fa-filter"></i>
+                                <select class="option_Product">
+                                    <option>Tất cả</option>
+                                    <option>Còn hàng</option>
+                                    <option>Ít hàng</option>
+                                    <option>Hết hàng</option>
+                                </select>
+                            </div>
+                            <div class="search_box">
+                                <input type="search" placeholder="Tìm kiếm" id="search" />
+                                <a href="#"><i class="fas fa-search"></i></a>
+                            </div>
+                        </td>
+                        <td class="functions_box">
+                            <div>
+                                <button id="btnall" name="btnall" type="submit">Tất cả</button>
+                            <button id="btnadd" name="btnadd" type="submit">Tạo</button>
+                            <button id="btnmodify" name="btnmodify" type="submit">Sửa</button>
+                            <button id="btnerase" name="btnerase" type="submit">Xóa</button>
+                            </div>
+                        </td>
+                    </tbody>
+                </table>
+                <table class="table_list_Product">
+                    <colgroup>
+                        <col span="1" style="width: 12.5%;">
+                        <col span="1" style="width: 25%;">
+                        <col span="1" style="width: 20%;">
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 20%;">
+                        <col span="1" style="width: 12.5%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Mã sản phẩm</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Nguồn nhập</th>
+                            <th>Số lượng</th>
+                            <th>Tình trạng</th>
+                            <th>Thời gian</th>
+                        </tr>
+                    </thead>
+                    <tbody>    
+                        <tr ng-repeat="stock in stocks">
+                            <td>{{stock.masp}}</td>
+                            <td>{{stock.tensp}}</td>
+                            <td>{{stock.nguon}}</td>
+                            <td>{{stock.sl}}</td>
+                            <td id="stock-status-content"><i id="stock-status-icon" class="{{stock.icon}}"></i> {{stock.status}}</td>
+                            <td>{{stock.date}}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        </div>
+    <script type="text/javascript">
+        var stocks = [
+        {
+          "masp": "SP1",
+          "tensp": "Quẩy bò ZinZin",
+          "nguon": "Shopbetra2k",
+          "sl": "22",
+          "icon": "fas fa-star",
+          "status": "Còn hàng",
+          "date": "29/11/2022"
+        },
+        {
+            "masp": "SP2",
+          "tensp": "Mực bento cay cay",
+          "nguon": "Shopbetra2k",
+          "sl": "13",
+          "icon": "fas fa-star",
+          "status": "Còn hàng",
+          "date": "29/11/2022"
+        }
+        ,
+        {
+            "masp": "SP3",
+          "tensp": "Tăm que giòn vị",
+          "nguon": "Shopbetra2k",
+          "sl": "13",
+          "icon": "fas fa-star",
+          "status": "Còn hàng",
+          "date": "29/11/2022"
+        }
+        ,
+        {
+            "masp": "SP4",
+          "tensp": "Khô gà lá chanh",
+          "nguon": "Shopbetra2k",
+          "sl": "12",
+          "icon": "fas fa-star",
+          "status": "Còn hàng",
+          "date": "29/11/2022"
+        }
+        ,
+        {
+            "masp": "SP5",
+          "tensp": "Khô heo giả bò",
+          "nguon": "Shopbetra2k",
+          "sl": "12",
+          "icon": "fas fa-star",
+          "status": "Còn hàng",
+          "date": "29/11/2022"
+        }
+        ,
+        {
+            "masp": "SP6",
+          "tensp": "Snack bò thơm cay",
+          "nguon": "Shopbetra2k",
+          "sl": "10",
+          "icon": "fas fa-star",
+          "status": "Còn hàng",
+          "date": "29/11/2022"
+        }
+        ,
+        {
+            "masp": "SP7",
+          "tensp": "Bánh tráng cuộn bơ",
+          "nguon": "Bánh tráng Minh Triết",
+          "sl": "10",
+          "icon": "fas fa-star",
+          "status": "Còn hàng",
+          "date": "29/11/2022"
+        }
+        ,
+        {
+            "masp": "SP8",
+          "tensp": "Bánh tráng rong biển",
+          "nguon": "Bánh tráng Minh Triết",
+          "sl": "10",
+          "icon": "fas fa-star",
+          "status": "Còn hàng",
+          "date": "29/11/2022"
+        }
+        ,
+        {
+            "masp": "SP9",
+          "tensp": "Bánh tráng trộn sate bò",
+          "nguon": "Bánh tráng Minh Triết",
+          "sl": "27",
+          "icon": "fas fa-star",
+          "status": "Còn hàng",
+          "date": "29/11/2022"
+        }
+        ,
+        {
+            "masp": "SP10",
+          "tensp": "Bánh tráng phô mai tôm hành",
+          "nguon": "Bánh tráng Minh Triết",
+          "sl": "20",
+          "icon": "fas fa-star",
+          "status": "Còn hàng",
+          "date": "29/11/2022"
+        }
+        ,
+        {
+            "masp": "SP11",
+          "tensp": "Cơm cháy lắc khô gà",
+          "nguon": "Bánh tráng Minh Triết",
+          "sl": "5",
+          "icon": "fas fa-star-half",
+          "status": "Ít hàng",
+          "date": "29/11/2022"
+        }
+        ,
+        {
+            "masp": "SP12",
+          "tensp": "Bánh tráng sa tế tắc",
+          "nguon": "Bánh tráng Minh Triết",
+          "sl": "10",
+          "icon": "fas fa-star",
+          "status": "Còn hàng",
+          "date": "29/11/2022"
+        }
+        ,
+        {
+            "masp": "SP13",
+          "tensp": "Bánh tráng tỏi phi cay",
+          "nguon": "Bánh tráng Minh Triết",
+          "sl": "25",
+          "icon": "fas fa-star",
+          "status": "Còn hàng",
+          "date": "29/11/2022"
+        }
+        ,
+        {
+            "masp": "SP14",
+          "tensp": "Cơm cháy chà bông",
+          "nguon": "Bánh tráng Minh Triết",
+          "sl": "0",
+          "icon": "fas fa-exclamation-triangle",
+          "status": "Hết hàng",
+          "date": "29/11/2022"
+        }
+    ]
+
+    var app = angular.module("angularApp", []);
+    app.controller('StockController', function ($scope) {
+        $scope.stocks = stocks
+    });
+
+        var dropdown = document.getElementsByClassName("dropdown_btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

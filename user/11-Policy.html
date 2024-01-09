@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Trang Chính sách & Điều khoản | ZinZin Food - Đồ ăn vặt ZinZin</title>
+    </head>
+
+    <body>
+<!-- HEADER=============================================================================================================== -->
+<div class="header">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/headerstyle.css">
+    
+    <div class="searchbar">
+        <div class="logo">
+            <a href="02-Homepage.html"  title="Zin Zin Food"><img class="logokey" src="image/logo/whitelogo.png" alt="logo" ></a>
+            <a href="02-Homepage.html" title="Zin Zin Food"><img class="logotitle" src="image/logo/whitetitle.png" alt="logotitle" ></a>
+        </div>
+        <div class="search_box">
+        
+    <!-- Menu hidden ----------------------------------------- -->
+            <div class="header-menu-bar-hid">
+                <input type="checkbox" id="check-menu-header">
+                <label for="check-menu-header">
+                    <div class="header-format-icon-bar">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                </label>
+                
+            <div class="div-header-list-menu">
+                <li><a href="02-Homepage.html">Trang chủ</a></li>
+                <li><a href="04-Account.html">Trang cá nhân</a></li>
+                <li><a onclick="openFormLogin(); scrollToTop()">Đăng nhập</a></li>
+                <li><a href="">Thông báo</a></li>
+                <li><a href="09-Cart.html">Giỏ hàng</a></li>
+                <li><a href="05-Product.html">Sản phẩm</a></li>
+                <li><a href="07-AboutUs.html">Về Zin Zin Food</a></li>
+                <li><a href="11-Policy.html">Chính sách & Điều khoản</a></li>
+                <li><a href="12-Voucher.html">Ưu đãi</a></li>
+                <!-- <li><a>Liên hệ</a></li> -->
+                </ul>
+                </div>
+            </div>
+
+     <form onsubmit="submitForm(event)">
+                    <div><input class="inputbox-search" data-view-id="main_search_from_input" type="text" value placeholder="Tìm kiếm đồ ăn vặt" id="inputvalue"></div>
+                </div> 
+                <!-- <input data-view-id="main_search_from_button" class="Search_Button" type="submit" title="Tìm kiếm" /> -->
+                <div class="button_search_group">
+                    <button data-view-id="main_search_from_button" class="Search_Button">
+                        <i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+            </form>
+                <div id="results"></div>
+                    <script>
+                        function submitForm(event){ 
+                        event.preventDefault();
+                        var ele = document.getElementById("inputvalue");                
+               
+                        if (ele.value +""==="bánh tráng"){window.location.replace("search_banhtrang.html")}
+                        else if (ele.value +""==="banh trang"){window.location.replace("search_banhtrang.html")}
+                        else if (ele.value +""==="bánh tráng cuộn bơ"){window.location.replace("search_banhtrangcuonbo.html")}
+                        else if (ele.value +""==="cuộn bơ"){ window.location.replace("search_banhtrangcuonbo.html")}
+                        else if (ele.value +""==="cuon bo"){window.location.replace("search_banhtrangcuonbo.html")}
+                        else if (ele.value +""==="banh trang cuon bo"){window.location.replace("search_banhtrangcuonbo.html")}
+ 
+                        else if (ele.value +""==="bánh tráng phô mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                        else if (ele.value +""==="banh trang pho mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                        else if (ele.value +""==="phô mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                        else if (ele.value +""==="pho mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                        
+                        else if (ele.value +""==="bánh tráng rong biển"){ window.location.replace("search_banhtrangrongbien.html")}
+                        else if (ele.value +""==="banh trang rong bien"){ window.location.replace("search_banhtrangrongbien.html")}
+                        else if (ele.value +""==="rong biển"){ window.location.replace("search_banhtrangrongbien.html")}
+                        else if (ele.value +""==="rong bien"){ window.location.replace("search_banhtrangrongbien.html")}
+
+                        else if (ele.value +""==="bánh tráng sa tế bò"){window.location.replace("search_banhtrangsatebo.html")}
+                        else if (ele.value +""==="banh trang sa te bo"){window.location.replace("search_banhtrangsatebo.html")}
+                        else if (ele.value +""==="sa tế bò"){window.location.replace("search_banhtrangsatebo.html")}
+                        else if (ele.value +""==="sa te bo"){window.location.replace("search_banhtrangsatebo.html")}
+                        else if (ele.value +""==="sate bò"){window.location.replace("search_banhtrangsatebo.html")}
+                        else if (ele.value +""==="sate bo"){window.location.replace("search_banhtrangsatebo.html")}
+                        else if (ele.value +""==="bò"){window.location.replace("search_banhtrangsatebo.html")}
+                        else if (ele.value +""==="bo"){window.location.replace("search_banhtrangsatebo.html")}
+                        else if (ele.value +""==="sate"){window.location.replace("search_banhtrangsatebo.html")}
+                        else if (ele.value +""==="sa tế"){window.location.replace("search_banhtrangsatebo.html")}
+                        
+                        else if (ele.value +""==="bánh tráng sa tế tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                        else if (ele.value +""==="banh trang sa te tac"){window.location.replace("search_banhtrangsatetac.html")}
+                        else if (ele.value +""==="sa tế tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                        else if (ele.value +""==="sa te tac"){window.location.replace("search_banhtrangsatetac.html")}
+                        else if (ele.value +""==="sate tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                        else if (ele.value +""==="sate tac"){window.location.replace("search_banhtrangsatetac.html")}
+                        else if (ele.value +""==="tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                        else if (ele.value +""==="tac"){window.location.replace("search_banhtrangsatetac.html")}
+    
+                        else if (ele.value +""==="bánh tráng tỏi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                        else if (ele.value +""==="banh trang toi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                        else if (ele.value +""==="tỏi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                        else if (ele.value +""==="toi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                        
+                        else if (ele.value +""==="cơm cháy khô gà"){ window.location.replace("search_comchaykhoga.html")}
+                        else if (ele.value +""==="com chay kho ga"){ window.location.replace("search_comchaykhoga.html")}
+                        else if (ele.value +""==="cơm cháy"){ window.location.replace("search_comchaykhoga.html")}
+                        else if (ele.value +""==="com chay"){ window.location.replace("search_comchaykhoga.html")}
+                        
+                        else if (ele.value +""==="khô gà lá chanh"){window.location.replace("search_khogalachanh.html")}
+                        else if (ele.value +""==="kho ga la chanh"){window.location.replace("search_khogalachanh.html")}
+                        else if (ele.value +""==="khô gà"){window.location.replace("search_khogalachanh.html")}
+                        else if (ele.value +""==="kho ga"){window.location.replace("search_khogalachanh.html")}
+
+                        
+                        else if (ele.value +""==="khô heo giả bò"){window.location.replace("search_khoheogiabo.html")}
+                        else if (ele.value +""==="kho heo gia bo"){window.location.replace("search_khoheogiabo.html")}
+                        else if (ele.value +""==="kho heo"){window.location.replace("search_khoheogiabo.html")}
+                        else if (ele.value +""==="khô heo"){window.location.replace("search_khoheogiabo.html")}
+                        else if (ele.value +""==="khô bò"){window.location.replace("search_khoheogiabo.html")}
+                        else if (ele.value +""==="kho bo"){window.location.replace("search_khoheogiabo.html")}
+
+                        else if (ele.value +""==="tăm que cay cay"){window.location.replace("search_tamquecaycay.html")}
+                        else if (ele.value +""==="tăm que"){window.location.replace("search_tamquecaycay.html")}
+                        else if (ele.value +""==="tam que cay cay"){window.location.replace("search_tamquecaycay.html")}
+                        else if (ele.value +""==="tam que"){window.location.replace("search_tamquecaycay.html")}
+
+                        else if (ele.value +""==="quẩy bò zinzin"){window.location.replace("search_quaybozinzin.html")}
+                        else if (ele.value +""==="quẩy bò"){window.location.replace("search_quaybozinzin.html")}
+                        else if (ele.value +""==="quay bo zinzin"){window.location.replace("search_quaybozinzin.html")}
+                        else if (ele.value +""==="quay bo"){window.location.replace("search_quaybozinzin.html")}
+
+                        else if (ele.value +""==="mực bento cay cay" ){window.location.replace("search_mucbentocaycay.html")}
+                        else if (ele.value +""==="mực bento" ){window.location.replace("search_mucbentocaycay.html")}
+                        else if (ele.value +""==="muc bento cay cay" ){window.location.replace("search_mucbentocaycay.html")}
+                        else if (ele.value +""==="muc bento" ){window.location.replace("search_mucbentocaycay.html")}
+                        else if (ele.value +""==="bento" ){window.location.replace("search_mucbentocaycay.html")}
+
+                        else if (ele.value +""==="snack bò thơm cay"){window.location.replace("search_snackbothomcay.html")}
+                        else if (ele.value +""==="snack bò"){window.location.replace("search_snackbothomcay.html")}
+                        else if (ele.value +""==="snack bo thom cay"){window.location.replace("search_snackbothomcay.html")}
+                        else if (ele.value +""==="snack bo"){window.location.replace("search_snackbothomcay.html")}
+                        else if (ele.value +""==="snack"){window.location.replace("search_snackbothomcay.html")}
+                        else if (ele.value +""==="thơm cay"){window.location.replace("search_snackbothomcay.html")}
+                        else if (ele.value +""==="thom cay"){window.location.replace("search_snackbothomcay.html")}
+
+                        else  {   window.alert("Không có kết quả tìm kiếm!");}
+
+                } 
+                    </script>      
+        <div class="tool-group">
+            <a href="09-Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <i class="fa fa-bell" aria-hidden="true"></i>
+            <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+
+            <div class="header-user-box">
+                <input type="checkbox" id="header-user">
+                <label for="header-user">
+                    <div class="header-user-icon-div">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                </label>             
+                <div class="user-options">
+                        <li ><a href="04-Account.html" id="header-account">Cá nhân</a></li>
+                        <li><a onclick="openFormLogin(); scrollToTop()">Đăng nhập</a></li>
+                        <!-- <li><a>Đăng xuất</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>       
+    </div>
+
+    <div class="navigationbar">
+        <ul class="navigationtab">
+            <li><a href="02-Homepage.html">Trang chủ</a></li>        
+            <li><a href="05-Product.html">Sản phẩm</a></li>
+            <li><a href="07-AboutUs.html">Về Zin Zin Food</a></li>
+            <li><a href="11-Policy.html">Chính sách & Điều khoản</a></li>
+            <li><a href="12-Voucher.html">Ưu đãi</a></li>
+                    <!-- <li><a>Liên hệ</a></li> -->
+        </ul>
+    </div>
+</div> 
+<link rel="stylesheet" href="css/loginsignup.css">
+<div onclick="doitab()" style="display: none;" id="tab-container1">
+    <div id="tab" class="tab">
+        <i style="display: none;" id="top"></i>
+        <i onclick="closeFormLogin()" class="form-close fas fa-times" id="btncancel"></i>
+        <!--Bắt Đầu Phần Tab Header-->
+        <div class="tab-header">
+            <div class="active" id="login-header"><i class="login__form"></i><b>ĐĂNG NHẬP</b></div>
+            <div></div>
+            <div id="register-header"><i class="register__form"></i><b>ĐĂNG KÝ</b></div>
+        </div>
+        <!--Kết Thúc Phần Tab Header-->
+        <div id="indicator" class="tab-indicator"></div>
+         <!--Bắt Đầu Phần Tab Body-->
+        <div class="tab-body">
+            <div id="login" class="active" role="tabpanel">
+                <form onsubmit="LogIn()" id="login-form" class="login__form-login" method="post">
+                    <h3>ĐĂNG NHẬP TÀI KHOẢN</h3>
+                    <p class="sub-title">Vui lòng nhập thông tin tài khoản để đăng nhập.</p>
+                    <table class="login-with-social">
+                        <td><button type="button" class=login-with-facebook-button>
+                            <a href="https://www.facebook.com/" class="login__btn">
+                                <span class="login__btn-image">
+                                    <img src="image/Login/facebook.png" width="20px" height="20px"  alt="" class="login__btn-logo">
+                                </span>
+                                <span class="login__btn-text">Facebook</span>
+                            </a>
+                        </button></td>
+                        <td><button type="button" class=login-with-google-button>
+                            <a href="https://www.google.com/" class="login__btn"> 
+                                <span class="login__btn-image">
+                                    <img src="image/Login/google.png" alt="" width="20px" height="20px" class="login__btn-logo">
+                                </span>
+                                <span class="login__btn-text">Google</span>
+                            </a>
+                        </button></td>
+                    </table>
+                    <input id="username" class="login__form-input" type="text" placeholder="Email hoặc Số điện thoại" autofocus><br>
+                    <div class="login__form-wrapper">
+                        <input class="login__form-input" type="password" placeholder="Mật khẩu" id="password">
+                        <i onclick="togglepass()" id="showbtn" class=" fas fa-eye" aria-hidden="true" fill="none"></i>
+                    </div>
+                    <p class="login-LostPassword lost_password"><a style="text-decoration:underline; cursor: pointer;" onclick="openFormForgot()" id="linkforgotpassword">Quên mật khẩu </a></p>
+                    <button class="login__form-submit" id="btnlogin" name="btnlogin" type="submit">Đăng nhập</button>
+                    <p class="login__form-admin"><a style="text-decoration:underline; cursor: pointer;" href="#down">Đăng nhập tài khoản admin</a></p>
+                </form>
+            </div>
+
+           <div id="register" role="tabpanel">
+                <form onsubmit="Register()" id="register-form" class="register__form-register" method="post">
+                    <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+                    <p class="sub-title">Vui lòng nhập thông tin của bạn để đăng ký.</p>
+                    <div class="register__form-wrapper">
+                        <span>*<input class="register__form-input" type="text" placeholder="Địa chỉ email" id="resemail" autofocus></span>
+                    </div>
+                    <div class="register__form-wrapper">
+                        <span>*<input class="register__form-input" type="text" placeholder="Số điện thoại" id="resphone"></span>
+                    </div>
+                    <div class="register__form-wrapper">
+                        <span>*<input class="register__form-input" type="password" placeholder="Mật khẩu" id="respassword"/></span>
+                        <i onclick="togglepass1()" id="showbtn1" class="fas fa-eye" aria-hidden="true" fill="none"></i>
+                    </div>
+                    <div class="register__form-wrapper">
+                        <span>*<input class="register__form-input" type="password" placeholder="Xác nhận mật khẩu" id="passwordagain"/></span>
+                        <i onclick="togglepass2()" id="showbtn2" class="fas fa-eye" aria-hidden="true" fill="none"></i>
+                    </div>
+                    <p class="register-AgreedLicense"><input type="checkbox" name="agreedlicense" required> Đã xác nhận <a style="text-decoration:underline; cursor: pointer;" href="11-Policy.html">các điều khoản chính sách</a> của ZinZin Food.</p>
+                    <button class="register__form-submit" id="btnregister" name="btnregister" type="submit">Đăng ký</button>
+                </form>
+            </div>            
+        </div>    
+        <!--Kết Thúc Phần Tab Body-->
+        <i id="down"></i>
+        <div id="adminlogin" class="admin-login">
+            <i onclick="closeFormLogin()" class="form-cancel fas fa-times" id="btncancel"></i>
+            <div class="tab-header"><div><i class="forgotpassword__form"></i><b>ĐĂNG NHẬP</b></div></div>
+            <Center><div class="tab-indicator"></div></Center>
+            <div class="tab-body">
+                <form onsubmit="AdminLogIn()" id="admin-login-form" class="login__form-adminlogin" method="get">
+                    <h3>ĐĂNG NHẬP ADMIN</h3>
+                    <p class="sub-title">Vui lòng nhập thông tin tài khoản admin để đăng nhập.</p>
+                    <input id="adminusername" class="login__form-input" type="text" placeholder="Email hoặc Số điện thoại" autofocus><br>
+                    <div class="login__form-wrapper">
+                        <input class="login__form-input" type="password" placeholder="Mật khẩu" id="adminpassword">
+                        <i onclick="togglepass3()" id="showbtn3" class=" fas fa-eye" aria-hidden="true" fill="none"></i>
+                    </div>
+                    <p class="login-LostPassword lost_password"><a style="text-decoration:underline; cursor: pointer;" onclick="openFormForgot()" id="linkforgotpassword">Quên mật khẩu </a></p>
+                    <button class="login__form-submit" id="btnadminlogin" name="btnlogin" type="submit">Đăng nhập</button>
+                    <p class="login__form-admin"><a style="text-decoration:underline; cursor: pointer;" onclick="returnlogin()" href="#top">Đăng nhập tài khoản khách hàng</a></p>                  
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<link rel="stylesheet" href="css/forgotpassword.css">
+<div style="display: none;" id="tab-container2">
+    <div class="tab1">
+        <input type="checkbox" id="check">
+        <i onclick="closeFormForgot()" class="fas fa-times" id="btncancel"></i>
+        <div id="forgotpassword" class="forgot-password">
+            <div class="tab-header1"><div><i class="forgotpassword__form"></i><b>QUÊN MẬT KHẨU</b></div></div>
+            <Center><div class="tab-indicator1"></div></Center>
+            <form action="#" onsubmit="Forgot()" class="forgotpassword__form-forgotpassword" method="post">
+                <h3>QUÊN MẬT KHẨU</h3>
+                <p class="sub-title">Vui lòng nhập địa chỉ email hoặc số điện thoại đã đăng ký. Chúng tôi sẽ gửi đến bạn liên kết thay đổi mật khẩu.</p>
+                <input class="forgotpassword__form-input" type="text" placeholder="Địa chỉ email" id="foremail" autofocus><br>
+                <button type="submit" class="forgotpassword__form-submit" id="btnsend">Gửi</button>
+                <label id="forcheck" style="display: none;" for="check"></label>
+            </form>
+        </div>
+        <div id="resetpassword" class="reset-password">
+            <div class="tab-header1"><div><i class="resetpassword__form"></i><b>ĐỎI MẬT KHẨU</b></div></div>
+            <Center><div class="tab-indicator1"></div></Center>
+            <form onsubmit="Reset()" class="resetpassword__form-resetpassword" method="get">
+                <h3>ĐỔI MẬT KHẨU</h3>
+                <p class="sub-title">Bạn vui lòng nhập mật khẩu mới để tiến hành đổi mật khẩu. Hãy bảo đảm mật khẩu mới đủ mạnh và có ít nhất 8 ký tự.</p>
+                <div class="resetpassword__form-wrapper">
+                    <input class="resetpassword__form-input" type="password" placeholder="Mật khẩu mới" id="forpassword"/>
+                    <i onclick="togglepass4()" id="showbtn4" class="fas fa-eye" aria-hidden="true" fill="none"></i>
+                </div>
+                <div class="resetpassword__form-wrapper">
+                    <input class="resetpassword__form-input" type="password" placeholder="Xác nhận mật khẩu mới" id="forpasswordagain"/>
+                    <i onclick="togglepass5()" id="showbtn5" class="fas fa-eye" aria-hidden="true" fill="none"></i>
+                </div>
+                <button type="submit" class="resetpassword__form-submit" id="btnsend">Đổi mật khẩu</button>
+                <div class="resent"><label for="check">Gửi lại liên kết</label></div>
+            </form>
+        </div>    
+    </div>
+</div>
+<script src="javascript/login.js"></script>
+
+       
+<!-- MAIN CONTENT========================================================================================================= -->
+<div class="PolicyPage">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/policiesstyle.css">
+    <div class="policy-tab-bar">
+        <div class="menu-bar-hid">
+            <input type="checkbox" id="check-policy-tab">
+            <label for="check-policy-tab">
+                <div class="format-icon-bar">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+            </label>
+            
+            <div class="div-list-menu-policy">
+            <ul class="list-menu-bar-hid">
+                <li><a>Chính sách thanh toán</a></li>
+                <li><a>Chính sách vận chuyển</a></li>
+                <li><a>Chính sách đổi hàng</a></li>
+                <li><a>Chính sách bảo mật</a></li>
+                <li><a>Chính sách chăm sóc khách hàng</a></li>
+            </ul>
+            </div>
+        </div>
+    
+
+        <div class="tabPanel-widget">
+
+            <label for="tab-1" tabindex="0"></label>
+            <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true" onchange="scrollToTop()">
+            <h2>Chính sách thanh toán</h2>
+            <div class="tab-main-content">
+              <div>
+                  <h1 class="content-main-title">CHÍNH SÁCH THANH TOÁN</h1>
+                  <h3 class="content-note">ZinZin Food cung cấp các phương thức thanh toán nào?</h3>
+                  <p>Nhằm mang đến Quý khách những trải nghiệm mua sắm trực tuyến tuyệt vời nhất, tại ZinZin Food, chúng tôi đưa ra 4 phương thức thanh toán để Quý khách dễ dàng lựa chọn:</p>
+                  <h3 class="content-title-level-1">1. Thanh toán bằng tiền mặt khi nhận hàng (COD)</h3>
+                  <h3>COD là gì?</h3>
+                  <p>COD là viết tắt của Cash On Delivery, nghĩa là thanh toán khi nhận hàng. Với phương thức thanh toán này, quý khách thanh toán bằng tiền mặt cho nhân viên giao hàng ngay khi nhận được đơn hàng của mình. Chúng tôi chấp nhận hình thức thanh toán khi nhận hàng (COD) cho hầu hết đơn hàng trên toàn quốc. Trừ những trường hợp sau:</p>
+                  <ul>
+                      <li>Chỉ áp dụng COD cho đơn hàng lớn hơn 50.000đ tại nội thành Hồ Chí Minh. Nếu đơn hàng ít hơn 50.000đ, quý khách vui lòng chọn hình thức thanh toán khác.</li>  
+                      <li>Không hỗ trợ phương thức Thanh toán bằng tiền mặt khi nhận hàng (COD) đối với đơn hàng có sản phẩm bắt buộc lưu chuyển trực tiếp từ cửa hàng để giao hàng, hoặc đơn hàng có từ 3 kiện hàng cùng size. Quý khách vui lòng chọn hình thức thanh toán trước bằng hình thức chuyển khoản. Nhân viên hỗ trợ đơn hàng sẽ liên hệ xác nhận thông tin đơn hàng cho quý khách.</li> 
+                  </ul>
+                  <h3 class="content-title-level-1">2. Thanh toán chuyển khoản:</h3>
+                  <ul>
+                      <li>Trong quá trình đặt hàng, Quý khách không muốn thanh toán bằng tiền mặt hoặc không thể thanh toán trực tiếp, Quý khách có thể chọn hình thức thanh toán chuyển khoản trong phần Phương thức thanh toán.</li>
+                      <li>Điều kiện để chọn hình thức thanh toán chuyển khoản là tài khoản ngân hàng của Quý khách đã được đăng ký sử dụng Internet Banking.</li>
+                  </ul>
+                  <p class="content-note">* Nội dung chuyển khoản: GB_[Mã đơn hàng]<br>
+                      Ví dụ: Quý khách thanh toán chuyển khoản cho đơn hàng 19xxxxxxx đặt hàng trên website, cú pháp ghi chú khi chuyển khoản là ZZ_19xxxxxxx
+                      </p>
+                  <h3 class="content-title-level-1">3. Thanh toán bẳng thẻ ATM nội địa:</h3>
+                  <p>Trong quá trình đặt hàng, quý khách chọn hình thức Thanh toán bằng thẻ ATM nội địa, quý khách sẽ được chuyển đến Cổng thanh toán trực tuyến bảo mật Onepay để thanh toán. Thẻ ATM của quý khách bắt buộc phải sử dụng Internet Banking để thực hiện phương thức thanh toán này.</p>
+                  <h3 class="content-title-level-1">4. Thanh toán bằng Visa/Master card:</h3>
+                  <p>Trong quá trình đặt hàng, quý khách chọn hình thức Thanh toán bằng thẻ Visa/Master card, quý khách sẽ được chuyển đến Cổng thanh toán trực tuyến bảo mật Onepay để thanh toán.</p>
+                  <h3 class="content-title-level-1">Giá trị đơn hàng là bao nhiêu thì tôi sẽ được xuất hóa đơn?</h3>
+                  <p>Trong mọi trường hợp, trừ khi có yêu cầu khác đi, Quý khách hàng sẽ nhận được hoá đơn theo thông tin cá nhân đã đăng ký khi mua hàng tại ZinZin Food.</p>
+              </div>
+            </div>
+  
+  
+            
+            <label for="tab-2" tabindex="0"></label>
+            <input id="tab-2" type="radio" name="tabs" aria-hidden="true" onchange="scrollToTop()">
+            <h2>Chính sách vận chuyển</h2>
+            <div class="tab-main-content">
+              <h1 class="content-main-title">CHÍNH SÁCH VẬN CHUYỂN VÀ GIAO NHẬN</h1>
+                  <h3 class="content-title-level-1">1. Đối tượng và phạm vi vận chuyển</h3>
+                  <ul>
+                      <li>Chính sách giao nhận được áp dụng cho tất cả các khách hàng đặt hàng qua website ZinZin Food.</li>  
+                      <li>ZinZin Food sẽ thực hiện tất cả các yêu cầu vận chuyển cho khách hàng trên phạm vi toàn quốc.</li> 
+                  </ul>
+  
+                  <h3 class="content-title-level-1">2. Hình thức vận chuyển:</h3>
+                  <h4>A. Nhận hàng trực tiếp tại cửa hàng</h4>
+                  <ul>
+                      <li>Với những khách đến mua hàng tại cửa hàng hoặc thông qua website ZinZin Food.</li>
+                      <li>Quý khách vui lòng kiểm tra thật kỹ hàng hóa, đối chiếu sản phẩm với chứng từ, phiếu bảo hành trước khi nhận hàng.</li>
+                      <li>Trường hợp hàng hóa phải chuyển từ kho của cửa hàng khác trong cùng hệ thống, nhân viên bán hàng sẽ liên hệ với Quý khách để thương thảo lại về thời gian giao hàng.</li>
+                  </ul>
+  
+                  <h4>B. Giao hàng nội thành : khu vực Hà Nội, Hải Phòng</h4>
+                  <ul>
+                      <li>Phí giao hàng trong nội thành : 30.000/ đơn hàng.</li>
+                      <li>Nhân viên giao hàng sẽ liên lạc trước với những khách hàng không có yêu cầu về thời gian để sắp xếp thời gian hợp lý với khách hàng.</li>
+                      <li>Với những khách hàng có yêu cầu về thời gian , nhân viên giao hàng sẽ liên lạc và sắp xếp giao đúng giờ khách hàng yêu cầu.</li>
+                      <li>Trừ những trường hợp thời gian quá cấp bách, hoặc ngoài thời gian làm việc của cửa hàng, nhân viên sẽ liên lạc và thỏa thuận lại với thời gian của khách hàng cho hợp lý.</li>
+                      <li>Quý khách vui lòng trực tiếp kiểm tra kỹ sản phẩm ngay khi nhận được hàng từ nhân viên giao hàng, nếu có vấn đề liên quan tới chủng loại, mẫu mã, chất lượng, số lượng hàng hoá không đúng như trong đơn đặt hàng, Quý khách vui lòng báo ngay cho chúng tôi để phối hợp xử lý. Nếu không có bất cứ vấn đề gì, Quý khách vui lòng nhận hàng và thanh toán đầy đủ.</li>
+                      <li>Trường hợp vì một lý do nào đó nhân viên giao hàng không thể giao hàng kịp thời, chúng tôi sẽ liên hệ lại và thông báo cho Quý khách được biết.</li>
+                  </ul>
+  
+                  <h4>C. Giao hàng liên tỉnh: thông qua dịch vụ GHTK.VN</h4>
+                  <ul>
+                      <li>Khi đặt hàng, Quý khách vui lòng điền đầy đủ và chính xác các thông tin cần thiết theo yêu cầu để tạo điều kiện thuận lợi cho chúng tôi trong việc cung cấp hàng hóa và nhận thanh toán nhanh chóng. Chúng tôi cũng không chịu trách nhiệm đối với những trường hợp giao hàng chậm trễ hay thất lạc vì các thông tin do Quý khách cung cấp không chính xác.</li>
+                      <li>Thời gian giao hàng Từ 2 đến 4 ngày (không tính Chủ Nhật hoặc những ngày Lễ, Tết).. Phí: 50.000đ/sản phẩm, thời gian này chỉ mang tính chất tương đối.</li>
+                      <li>Những đơn hàng đặt vào Chủ nhật, ngày nghỉ Lễ, Tết: thời gian giao hàng được tính từ 16 giờ ngày thứ Hai tuần sau hoặc ngày làm việc đầu tiên sau ngày nghỉ Lễ,Tết.</li>
+                      <li>Quý khách vui lòng kiểm tra kỹ hàng hoá ngay khi nhận hàng từ người chuyển phát hàng hoá, nếu có vấn đề liên quan tới chủng loại, chất lượng, số lượng hàng hoá không đúng như trong đơn đặt hàng, Quý khách vui  báo ngay cho chúng tôi để phối hợp với đơn vị chuyển phát hàng hóa xử lý.</li>
+                  </ul>
+  
+                  <h4>D. Thay đổi, hủy bỏ giao dịch</h4>
+                  <p>Trong những trường hợp sau đây quý khách có thể thay đổi hoặc hủy bỏ giao dịch:</p>
+                  <ol>
+                      <li>Khi cửa hàng đã xác nhận được sản phẩm vẫn chưa được gửi đi.</li>
+                      <li>Nếu sản phẩm đã được gửi đi, có thay đổi khách hàng phải chịu phí ship.</li>
+                  </ol>
+                  <p>Thông thường sau khi nhận được thông tin đặt hàng chúng tôi sẽ xử lý đơn hàng trong vòng 24h và phản hồi lại thông tin cho khách hàng về việc thanh toán và giao nhận. Thời gian giao hàng thường trong khoảng từ 2-4 ngày kể từ ngày chốt đơn hàng hoặc theo thỏa thuận với khách khi đặt hàng.Tuy nhiên, cũng có trường hợp việc giao hàng kéo dài hơn nhưng chỉ xảy ra trong những tình huống bất khả kháng như sau:</p>
+                  <ul>
+                      <li>Nhân viên chúng tôi liên lạc với khách hàng qua điện thoại không được nên không thể giao hàng.</li>
+                      <li>Địa chỉ giao hàng bạn cung cấp không chính xác hoặc khó tìm.</li>
+                      <li>Số lượng đơn hàng tăng đột biến khiến việc xử lý đơn hàng bị chậm.</li>
+                      <li>Đối tác cung cấp hàng chậm hơn dự kiến khiến việc giao hàng bị chậm lại hoặc đối tác vận chuyển giao hàng bị chậm.</li>
+                      <li>Về phí vận chuyển, chúng tôi sử dụng dịch vụ vận chuyển ngoài nên cước phí vận chuyển sẽ được tính theo phí của các đơn vị vận chuyển tùy vào vị trí và khối lượng của đơn hàng, khi liên hệ lại xác nhận đơn hàng với khách sẽ báo mức phí cụ thể cho khách hàng.</li>
+                  </ul>
+            </div>
+  
+  
+            <label for="tab-3" tabindex="0"></label>
+            <input id="tab-3" type="radio" name="tabs" aria-hidden="true" onchange="scrollToTop()">
+            <h2>Chính sách đổi trả hàng</h2>
+            <div class="tab-main-content">
+              <h1 class="content-main-title">CHÍNH SÁCH ĐỔI TRẢ HÀNG</h1>
+                  <p>Chính sách Đổi trả sản phẩm của ZinZin Food quy định các lý do chấp nhận, yêu cầu cho sản phẩm được đổi trả và thời gian xử lý đổi trả cho khách hàng.</p>
+                  <h3 class="content-title-level-1">1. Lý do chấp nhận đổi trả</h3>
+                  <ul>
+                      <li>Sản phẩm bị mất niêm phong, bị giao sai về số lượng, thông tin và mẫu mã so với đơn đặt hàng.</li>  
+                      <li>Sản phẩm bị hỏng do lỗi của nhà sản xuất (lỗi về thiết kế, nội dung, các lỗi ẩn tì/nội tì, khác biệt so với tiêu chuẩn chất lượng đã công bố của nhà sản xuất) hoặc lỗi trong quá trình vận chuyển (bị biến dạng, trầy xước, vấy bẩn, nứt vỡ v.v.).</li>
+                      <li>Nhà cung cấp bị phá sản, ngưng hoạt động dẫn đến khách hàng không sử dụng được voucher trong thời gian hiệu lực.</li>
+                      <li>Voucher khi khách hàng sử dụng có chất lượng dịch vụ không đúng như cam kết: không áp dụng đúng điều kiện, thái độ phục vụ thiếu tôn trọng, không thể sắp xếp ngày sử dụng dịch vụ như khách hàng mong muốn ít nhất 3 lần (có bằng chứng cụ thể).</li> 
+                  </ul>
+  
+                  <h3 class="content-title-level-1">2. Điều kiện đổi trả</h3>
+                  <h4>a. Yêu cầu cho sản phẩm đổi trả</h4>
+                  <ul>
+                      <li>Sản phẩm không nằm trong danh mục hạn chế đổi trả của ZinZin Food như được liệt kê tại phụ lục đính kèm theo đây.</li>
+                      <li>Sản phẩm còn nguyên vẹn, đầy đủ nhãn mác, nguyên đai kiện, niêm phong theo quy cách ban đầu (trừ trường hợp sản phẩm bị lỗi hoặc bị hư hại trong quá trình vận chuyển).</li>
+                      <li>Sản phẩm/dịch vụ còn đầy đủ phụ kiện và tặng phẩm đi kèm (nếu có).</li>
+                      <li>Sản phẩm không bị dơ bẩn, không có mùi lạ, không có dấu hiệu đã qua sử dụng.</li>
+                      <li>Khách hàng phải gửi cho ZinZin Food yêu cầu đổi trả (“Yêu Cầu Đổi Trả”) gồm có: (i) phiếu yêu cầu đổi trả theo mẫu phiếu yêu cầu đổi trả của ZinZin Food; (ii) tài liệu chứng minh khách hàng đã mua sản phẩm/dịch vụ tại ZinZin Food (số đơn hàng, hóa đơn mua hàng, biên nhận giao hàng, sao kê của ngân hàng…); và (iii) sản phẩm/dịch vụ cần đổi trả và tặng phẩm đi kèm nếu có.</li>
+                  </ul>
+  
+                  <h4>b. Thời gian đổi trả</h4>
+                  <p>Trả lại hàng ngay tại thời điểm giao/nhận hàng</p>
+                  <p>Khách hàng liên hệ để đổi trả hàng từ khoảng cách xa sau thời điểm nhận hàng không quá 72 giờ.</p>
+  
+                  <h4>c. Chi phí đổi trả</h4>
+                  <ul>
+                      <li>Đối với các sản phẩm đổi lại do lỗi của ZinZin Food hoặc nhà cung cấp, khách hàng sẽ được miễn phí đổi trả và được giao hàng miễn phí tới địa điểm ghi trên phiếu yêu cầu đổi trả.</li>
+                      <li>Đối với các sản phẩm trả lại do khách hàng thay đổi nhu cầu sử dụng, trừ trường hợp bài giới thiệu sản phẩm quy định áp dụng phí đổi trả, khách hàng sẽ được miễn phí đổi trả và sẽ phải trả phí vận chuyển theo chính sách giao vận của ZinZin Food nếu muốn được gửi hàng mới đến địa chỉ yêu cầu.</li>
+                  </ul>
+  
+                  <h3 class="content-title-level-1">3. Quy định hoàn tiền</h3>
+                  <h4>a. Nguyên tắc hoàn tiền</h4>
+                  <ul>
+                      <li>Phương thức hoàn tiền căn cứ theo phương thức thanh toán của Khách hàng khi mua hàng.</li>
+                      <li>Hoàn tiền khi khách hàng sử dụng voucher: trong các trường hợp đặc biệt được ZinZin Food chấp nhận hoàn tiền khi khách hàng sử dụng Giftcode, ZinZin Food sẽ không hoàn lại khoản giá trị voucher khách hàng đã sử dụng mà chỉ hoàn lại khoản tiền khách hàng thực tế bỏ ra khi mua hàng.</li>
+                  </ul>
+  
+                  <h4>b. Phương thức hoàn tiền</h4>
+                  <p>Các phương thức hoàn tiền bao gồm:</p>
+                  <ul>
+                      <li>Hoàn tiền thông qua chuyển khoản ngân hàng.</li>
+                      <li>Hoàn tiền thông qua ngân hàng chấp nhận thẻ.</li>
+                      <li>Hoàn tiền mặt</li>
+                  </ul>
+  
+                  <h4>c. Thời gian xử lý</h4>
+                  <ul>
+                      <li>ZinZin Food sẽ gửi kết quả phản hồi Yêu Cầu Đổi Trả tới Khách hàng thông qua email hoặc/và tin nhắn SMS trong vòng tối đa 02 ngày làm việc kể từ khi ZinZin nhận Yêu Cầu Đổi Trả.</li>
+                      <li>Nếu yêu cầu hoàn trả của khách hàng đáp ứng các điều kiện quy định tại khoản 1, mục II của Chính sách này, ZinZin Food sẽ thực hiện thủ tục hoàn tiền cho khách hàng kể từ khi yêu cầu đổi trả được thực hiện trong thời gian như sau:
+                          <ul>
+                              <li>Với phương thức thanh toán không thông qua ngân hàng: khách hàng sẽ nhận được tiền hoàn từ 5-7 ngày làm việc.</li>
+                              <li>Với phương thức thanh toán thông qua ngân hàng: ZinZin Food sẽ hoàn tất thủ tục hoàn tiền để chuyển yêu cầu đến ngân hàng trong vòng 5-7 ngày làm việc. Sau đó, ngân hàng sẽ tiếp tục xử lý yêu cầu hoàn tiền của Quý Khách trong vòng 7 đến 15 ngày làm việc kể từ lúc nhận được yêu cầu.</li>
+                          </ul>
+                      </li>
+                  </ul>
+  
+                  <h3 class="content-title-level-1">4. Phương thức đổi trả</h3>
+                  <p>Khách hàng vui lòng mang trực tiếp hàng hóa cần đổi trả đến Trung tâm đổi trả của ZinZin Food tại địa chỉ sau:</p>
+                  <p>- Tại TP Hồ Chí Minh: KTX Khu B, ĐHQG Thành phố Hồ Chí Minh.</p>
+                  <p>- Tại Hà Nội, Đà Nẵng và các tỉnh/thành khác: thông báo sau</p>
+                 
+                  
+            </div>
+  
+  
+            <label for="tab-4" tabindex="0"></label>
+            <input id="tab-4" type="radio" name="tabs" aria-hidden="true" onchange="scrollToTop()">
+            <h2>Chính sách bảo mật</h2>
+            <div class="tab-main-content">
+              <h1 class="content-main-title">CHÍNH SÁCH BẢO MẬT THÔNG TIN</h1>
+                  <p>Tại ZinZin Food, chúng tôi coi việc bảo vệ thông tin cá nhân của bạn là ưu tiên hàng đầu. Chúng tôi hiểu hoàn toàn rằng thông tin cá nhân của bạn là thuộc về bạn, vì vậy chúng tôi nỗ lực hết sức lưu trữ bảo mật và xử lý cẩn thận thông tin mà bạn chia sẻ với chúng tôi.</p>
+                  <p>Chúng tôi coi sự tin cậy của bạn có giá trị cao nhất. Vì vậy chúng tôi thu thập lượng thông tin tối thiểu chỉ khi có sự cho phép của bạn và sử dụng thông tin này chỉ cho các mục đích đã dự định. Chúng tôi không cung cấp thông tin cho các bên thứ ba mà không có sự hiểu biết của bạn.</p>
+                  <h3 class="content-title-level-1">1. Mục đích thu thập thông tin cá nhân</h3>
+                  <p>Mục đích của việc thu thập thông tin khách hàng nhằm liên quan đến các vấn đề như:</p>
+                  <ul>
+                      <li>Hỗ trợ khách hàng: mua hàng, thanh toán, giao hàng.</li>  
+                      <li>Cung cấp thông tin sản phẩm, các dịch vụ và hỗ trợ theo yêu cầu của khách hàng.</li> 
+                      <li>Gửi thông báo các chương trình, sản phẩm mới nhất của chúng tôi.</li>
+                      <li>Giải quyết vấn đề phát sinh khi mua hàng.</li>
+                      <li>Ngăn chặn các hoạt động phạm pháp.</li>
+                      <li>Đo lường và cải thiện các dịch vụ của chúng tôi.</li>
+                  </ul>
+  
+                  <h3 class="content-title-level-1">2. Phạm vi thu thập thông tin</h3>
+                  <p>Chúng tôi thu thập thông tin cá nhân của khách hàng khi:</p>
+                  <ul>
+                      <li>Khách hàng trực tiếp cung cấp: Khách hàng trực tiếp cung cấp bao gồm: họ tên, địa chỉ email, số điện thoại, địa chỉ.</li>
+                      <li>Khách hàng tương tác với chúng tôi: Chúng tôi sử dụng cookies và công nghệ theo dấu khác để thu thập một số thông tin khi khách hàng tương tác trên website ZinZin Food.</li>
+                      <li>Từ những nguồn hợp pháp khác: Chúng tôi thu thập thông tin khách hàng từ các nguồn hợp pháp khác.</li>
+                  </ul>
+  
+                  <h3 class="content-title-level-1">3. Thời gian lưu trữ thông tin</h3>
+                  <p>ZinZin Food sẽ lưu trữ các thông tin cá nhân do khách hàng cung cấp trên các hệ thống nội bộ của chúng tôi trong quá trình cung cấp dịch vụ cho khách hàng hoặc khi khách hàng có yêu cầu hủy thông tin đã cấp.</p>
+            </div>
+  
+            <label for="tab-5" tabindex="0"></label>
+            <input id="tab-5" type="radio" name="tabs" aria-hidden="true" onchange="scrollToTop()">
+            <h2>Chính sách chăm sóc khách hàng</h2>
+            <div class="tab-main-content">
+              <h1 class="content-main-title">CHÍNH SÁCH CHĂM SÓC KHÁCH HÀNG</h1>
+                  <h3 class="content-title-level-1">1. Chính sách đổi trả</h3>
+                  <p>Toàn bộ chính sách đổi trả / bảo hành sản phẩm được công bố chi tiết tại đây: "Link"</p>
+  
+                  <h3 class="content-title-level-1">2. Chính sách khuyến mại</h3>
+                  <p>ZinZin Food cung cấp hệ thống xếp hạng người dùng thân thiết gồm:</p>
+                  <ul>
+                      <li>Hạng vàng: tổng số đơn hàng có giá trị đạt trên 5.000.000 VNĐ</li>
+                      <li>Hàng bạc: tổng số đơn hàng có giá trị đạt trên 2.000.000 VNĐ</li>
+                      <li>Hạng đồng: tổng số đơn hàng có giá trị đạt trên 500.000 VNĐ</li>
+                  </ul>
+  
+                  <h3 class="content-title-level-1">3. Chính sách tư vấn/chăm sóc khách hàng</h3>
+                  <p>Nhân viên tư vấn khách hàng sẽ chủ động liên hệ ngay khi khách nhận được hàng để hướng dẫn sử dụng, chia sẻ các thông tin cần thiết.</p>
+  
+                  <h3 class="content-title-level-1">4. Chính sách bảo mật</h3>
+                  <p>Toàn bộ chính sách bảo mật thông tin khách hàng được công bố tại đây: "Link"</p>
+                  <p>Mọi ý kiến phản hồi, góp ý xin liên hệ:
+                      <br>Mail: zinzinfood.contact@gmail.com
+                      <br>Các chính sách có thể thay đổi tùy vào nhu cầu thực tế, khi có thay đổi ZinZin Food sẽ gửi mail thông báo cho khách hàng và áp dụng sau 7 ngày thông báo.
+                      </p>
+            </div> 
+
+    </div>
+         
+</div>
+        
+
+<!-- FOOTER=============================================================================================================== -->
+<div class="footer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/footerstyle.css">
+    <script src="javascript/login.js"></script>
+    <script src="javascript/footer.js"></script>
+
+    <div class="submission_area">
+        <div class="text_guide">
+            <div class="title">Đăng ký theo dõi</div>
+            <div class="content">Đừng bỏ lỡ hàng ngàn sản phẩm và khuyến mãi cực hấp dẫn.</div>
+        </div>
+        <div class="box_input_group">
+            <input id="input-email" class="inputbox" type="text" placeholder="Nhập email của bạn...">
+            <input class="submit" type="submit" value="Đăng ký" onclick="ValidateEmail()" >
+        </div>
+    </div>
+
+    <div class="footer_content_area">
+        <div class="about_zinzin_area">
+            <div class="about_zinzin_texttitle">VỀ ZIN ZIN FOOD</div>
+            <ul class="about_zinzin_detail">
+                <li><a>CÁC CÂU HỎI THƯỜNG GẶP</a></li>
+                <li><a>GỬI YÊU CẦU HỖ TRỢ</a></li>
+                <li><a>HƯỚNG DẪN ĐẶT HÀNG</a></li>
+                <li><a href="11-Policy.html">PHƯƠNG THỨC VẬN CHUYỂN</a></li>
+                <li><a href="11-Policy.html">CHÍNH SÁCH ĐỔI TRẢ</a></li>
+                <li><a href="11-Policy.html">HỖ TRỢ KHÁCH HÀNG: HOTRO@ZINZIN.VN</a></li>
+                <li><a href="11-Policy.html">BÁO LỖI BẢO MẬT SECURITY@ZINZIN.VN</a></li>
+            </ul>
+        </div>
+
+        <div class="payment_area">
+            <div class="payment_texttitle">PHƯƠNG THỨC THANH TOÁN</div>
+            <ul class="payment_detail">
+                <li class="visa"><a><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+                <li class="momo"><a><img src="image/footer/momo1.png" alt="momo"></a></li>
+                <li class="bank"><a><i class="fa fa-university" aria-hidden="true"></i></a></li>
+                <li class="cash"><a><i class="fa fa-money" aria-hidden="true"></i></a></li>
+                
+            </ul>
+
+            <div class="footer_credit_area">
+                <div class="logo_credit">
+                    <img class="logo-footer" src="image/logo/whitelogo.png" alt="logo">
+                    <img src="image/footer/credit.png" alt="BoCongThuong">
+                </div>
+                <div class="credit_bytext">COPYRIGHT 	&#169; 2022 ZIN ZIN FOOD ALL RIGHT RESESERVED</div>
+                
+            </div>
+        </div>
+
+        <div class="Col3_connect_app">
+            <div class="connect_area">
+                <div class="connect_us_texttitle">KẾT NỐI VỚI CHÚNG TÔI</div>
+                <ul class="social_media_detail">
+                    <li class="facebook"><a href="https://www.facebook.com/ZinZinFoodst"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                    <li class="tiktok"><a href="https://www.tiktok.com/@zinzinfood"><img src="image/footer/tiktok.png" alt="tiktok"></a></li>
+                    <li class="email"><a href="zinzinfood.contact@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="download_app_area">
+                <div class="download_app_texttitle">TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI DI ĐỘNG</div>
+                <ul class="download_app_detail">
+                    <li><a><img src="image/footer/qr.png" alt="qrcode"></a></li>
+                    <li><a><img src="image/footer/gg_play.png" alt="chplay"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-4-message">
+        
+            <div class="chat_area">
+                <i><img src="image/footer/messenger.png" alt="messenger" ></i>
+            </div>
+            <div class="fwd_area" onclick="scrollToTop()">
+                <i class="fa fa-caret-up" aria-hidden="true"></i>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    </body>
+</html>

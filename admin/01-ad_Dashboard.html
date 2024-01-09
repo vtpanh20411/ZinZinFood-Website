@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-----------------------------------------sidebar + header css-------------------------------------->
+    <link rel="stylesheet" type="text/css" href="css/01-ad_Dashboard.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --red: #BD3213;
+            --black: #000;
+            --white: #fff;
+            --light_gray: #eceff3;
+        }
+        
+        * {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            transition: all .2s linear;
+            transition: width none;
+        }
+        
+        body {
+            background: var(--white);
+        }
+        .title{
+            text-decoration:none;
+            color: var(--black);
+            font-weight: bold;
+            font-size: 32px;
+            font-style:normal;
+        }
+        .title:hover {
+            color: #BD3213;
+        }
+        .container_Products {
+            width: 95%;
+            margin: 1.5em auto;
+            font-size:16px;
+        }
+        .btn_Products {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            padding: 0px 10px 0px 10px;
+        }
+        .btn_Products_box {
+            display: inline-flex;
+            justify-content: left;
+        }
+        .functions_box {
+            display: inline-flex;
+            margin: 5px 0px;
+        }
+        .functions_box1 {
+            display: inline-flex;
+            margin: 5px 0px;
+        }
+        .functions_box div {
+            justify-content: right;
+        }
+        .filter_box {
+            color: white;
+            width: 140px;
+            background: var(--red);
+            padding: 5px;
+            border-radius: 16px;
+            margin-right: 8px;
+            justify-content: left;
+        }
+        .option_Product {
+            color: white;
+            font-weight: bold;
+            background-color: #BD3213;
+            align-items: center;
+            justify-content: right;
+            vertical-align: middle;
+        }
+        .fa-filter {
+            padding-left: 5px;
+        }
+        .search_box {
+            width: 170px;
+            border: 1px solid #BD3213;
+            padding: 5px;
+            border-radius: 16px;
+            align-items: center;
+            justify-content: center;
+        }
+        .search_box input {
+            width: 140px;
+            justify-content: center;
+            padding: 0px 30px 0px 5px;
+            vertical-align: middle;
+        }
+        .fa-search {
+            align-items: center;
+            justify-content: right;
+            margin-left: -25px;
+            color: #BD3213;
+        }
+        .functions_box button {
+            border-radius: 10px;
+            margin: 0px 4px;
+            color: #fff;
+            background-color: #BD3213;
+            font-weight: bold;
+            padding: 6px 10px;
+        }
+        /*-------------------------------CONTENT PRODUCTS---------------------------------*/
+        .content_Products {
+            background: var(--white);
+            padding: 1.5em 0;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        
+        .table_list_Product {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5em 0 0.1em;
+        }
+        
+            .table_list_Product tr th {
+                background: var(--red);
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                padding: 0.5em;
+                color: #fff;
+                text-align: center;
+            }
+        
+            .table_list_Product tr td {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+                padding: 0.5em;
+                text-align: center;
+            }
+        
+            .table_list_Product .last td {
+                border-bottom: none;
+            }
+        
+            .table_list_Product .last {
+                border-bottom: none;
+            }
+        
+            /* .table_list_Product tr:hover {
+                background: var(--red);
+                color: #fff;
+            } */
+        
+        /*-------------------------------------BOX------------------------------*/
+        
+        .box_container {
+            display: flex;
+            margin: 10px 0px;
+            align-items:center;
+            justify-content:center;
+        }
+        
+        .box_1 {
+            width: calc(100%/4);
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            background: var(--white);
+            position: relative;
+            padding: 10px;
+        }
+        
+        .box_1_tittle {
+            font-size: 18px;
+            color: #000;
+            margin: auto;
+            font-weight: bold;
+        }
+        
+        .box_1_number {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: right;
+            color: var(--red);
+            margin: auto;
+        }
+        
+        @media screen and (max-width: 900px) {
+            .table_list_Product {
+                text-align: unset;
+            }
+        
+                .table_list_Product tr {
+                    border: none;
+                    text-align:end;
+                }
+        
+        
+            thead {
+                display: none;
+            }
+        
+            .table_list_Product, .table_list_Product tbody, .table_list_Product tr, .table_list_Product td {
+                display: block;
+                width: 100%;
+            }
+        
+                .table_list_Product tr {
+                    margin-bottom: 15px;
+                    border: 2px solid var(--red);
+                    padding: 10px;
+                    background-color: var(--white);
+                }
+        
+                .table_list_Product td:first-child::before {
+                    text-align: center;
+                    vertical-align: middle;
+                    content: "Tình hình kinh doanh";
+                }
+        
+                .table_list_Product td:nth-child(2)::before {
+                    content: "Chỉ số Marketing";
+                }
+        
+                .table_list_Product td:nth-child(3)::before {
+                    content: "Biểu đồ số người đăng ký";
+                }
+        
+                .table_list_Product td:nth-child(4)::before {
+                    content: "Chỉ số Marketing";
+                }
+                .table_list_Product td:nth-child(5)::before {
+                    content: "";
+                }
+                .table_list_Product td:nth-child(6)::before {
+                    content: "";
+                }
+            td {
+                text-align: right;
+            }
+        
+                td::before {
+                    float: left;
+                    font-weight: bold;
+                    margin-right: 10%;
+                }
+        
+            .table_list_Product th, tr, td {
+                border-bottom: 0;
+                font-size: 14px;
+            }
+        
+            .table_list_Product td:last-child {
+                width: 100%;
+            }
+        
+            .box_container{
+                display:block;
+            }
+            .box_1{
+                width:100%;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .table_list_Product {
+                text-align: unset;
+            }
+        
+                .table_list_Product tr {
+                    border: none;
+                    text-align:end;
+                }
+        
+        
+            thead {
+                display: none;
+            }
+        
+            .table_list_Product, .table_list_Product tbody, .table_list_Product tr, .table_list_Product td {
+                display: block;
+                width: 100%;
+            }
+        
+                .table_list_Product tr {
+                    margin-bottom: 15px;
+                    border: 2px solid var(--red);
+                    padding: 10px;
+                    background-color: var(--white);
+                }
+        
+                .table_list_Product td:first-child::before {
+                    text-align: center;
+                    vertical-align: middle;
+                    content: "Tình hình kinh doanh";
+                }
+        
+                .table_list_Product td:nth-child(2)::before {
+                    content: "Số lượt tài khoản đăng ký ";
+                }
+        
+                /* .table_list_Product td:nth-child(3)::before {
+                    content: "Nguồn nhập";
+                }
+        
+                .table_list_Product td:nth-child(4)::before {
+                    content: "Số lượng";
+                }
+                .table_list_Product td:nth-child(5)::before {
+                    content: "Tình trạng";
+                }
+                .table_list_Product td:nth-child(6)::before {
+                    content: "Thời gian";
+                } */
+            td {
+                text-align: right;
+            }
+        
+                td::before {
+                    float: left;
+                    font-weight: bold;
+                    margin-right: 10%;
+                }
+        
+            .table_list_Product th, tr, td {
+                border-bottom: 0;
+                font-size: 14px;
+            }
+        
+            .table_list_Product td:last-child {
+                width: 100%;
+            }
+        
+            .box_container{
+                display:block;
+            }
+            .box_1{
+                width:100%;
+            }
+            .btn_Products {
+                display: block;
+            }
+            .btn_Products_box {
+                display: inline-flex;
+            }
+            .functions_box {
+                display: inline-flex;
+            }
+        }
+    </style>
+</head>
+<body class="mybody">
+    <!---------------------------SIDEBAR-------------------------->
+    <input type="checkbox" id="check" />
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="image/dashboard/White ver 02.png" width="80" height="70" />
+        </div>
+        <div id="dropdown-sidenav" class="dropdown-sidenav">
+            <a href="01-ad_Dashboard.html"><i class="fas fa-columns" style="margin-right:10px;"></i>Dashboard</a>
+            <a href="06-ad_User.html"><i class="fas fa-user" style="margin-right:10px;"></i>Người dùng</a>
+            <a href="05-ad_Review.html"><i class="fas fa-comments" style="margin-right:10px;"></i>Đánh giá</a>
+            <button class="dropdown_btn"><i class="fas fa-cube" style="margin-right:10px;"></i>Sản phẩm<i class="fas fa-caret-down"></i></button>
+            <div class="dropdown-container">
+                <a href="02-ad_Product.html">Danh sách</a>
+                <a href="03-ad_Stock.html">Kho hàng</a>
+            </div>
+            <a href="04-ad_Order.html"><i class="fas fa-shopping-cart" style="margin-right:10px;"></i>Đơn hàng</a>
+            <a href="07-ad_Delivery.html"><i class="fas fa-truck" style="margin-right:10px;"></i>Vận chuyển</a>
+            <a href="08-ad_Invoice.html"><i class="fas fa-file-alt" style="margin-right:10px;"></i>Hóa đơn</a>
+            <a href="09-ad_Marketing.html"><i class="fas fa-bullhorn" style="margin-right:10px;"></i>Marketing</a>
+            <a href="#"><i class="fas fa-gear" style="margin-right:10px;"></i>Cài đặt</a>
+            <a href="../user/02-Homepage.html"><i class="fas fa-times-circle" style="margin-right:10px;"></i>Đăng xuất</a>
+            <br/>
+        </div>
+    </div>
+    <!---------------------------CONTENT-------------------------->
+    <div class="content">
+        <!--------------------------HEADER-------------------------->
+        <div class="header">
+            <div class="user">
+                <a href="#" style="text-decoration: none; color:#fff;"><i class="fas fa-bell"></i></a>
+                <a href="#" style="text-decoration: none; color:#fff;"><i class="fas fa-user-circle" style="margin-right:10px;"></i>ZinZin Food</a>
+            </div>
+        </div>
+        <!-----------------MY CONTENT: STOCK--------------------->
+        <div class="container_Products">
+            <a class="title">Dashboard</a>
+            <!-----------------HEADER BOX--------------------->
+            <div class="box_container">
+                <div class="box_1" style="margin: 10px 10px 10px 0px;">
+                    <p class="box_1_tittle">Tổng số tài khoản </p>
+                    <p class="box_1_number">50</p>
+                </div>
+                <div class="box_1" style="margin: 10px 10px 10px 0px;">
+                    <p class="box_1_tittle">Tổng doanh thu</p>
+                    <p class="box_1_number">2.000.000</p>
+                </div>
+                <div class="box_1" style="margin: 10px 10px 10px 0px;">
+                    <p class="box_1_tittle">Tổng đơn hàng</p>
+                    <p class="box_1_number">40</p>
+                </div>
+                <div class="box_1" style="margin: 10px 0px 10px 0px;">
+                    <p class="box_1_tittle">Tổng số sản phẩm </p>
+                    <p class="box_1_number">120</p>
+                </div>
+            </div>
+            <!--------------------------TABLE LIST PRODUCT---------------------------------->
+            <div class="content_Products">
+                <table class="btn_Products">
+                    <tr>
+                        <td class="btn_Products_box">
+                            <div class="filter_box">
+                                <i class="fas fa-filter"></i>
+                                <select class="option_Product">
+                                    <option>Tất cả</option>
+                                    <option>K.Doanh</option>
+                                    <option>Đăng ký</option>
+                                </select>
+                            </div>
+                            <div class="search_box">
+                                <input type="search" placeholder="Tìm kiếm" id="search" />
+                                <a href="#"><i class="fas fa-search"></i></a>
+                            </div>
+                        </td>
+                        <td class="functions_box">
+                            <div>
+                            <button id="btnadd" name="btnadd" type="submit">Tạo báo cáo</button>  &nbsp;                       
+                        </td>    
+                    </tr>
+                </table>
+                <table class="btn_Products">
+                    <tr>
+                        <td class="functions_box1" ><div><b>Từ ngày: &nbsp;&nbsp;&nbsp;</b></div></td>
+                        <td class="functions_box1" ><div class="search_box"><input type="date"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="functions_box1"><div><b>Đến ngày:&nbsp;&nbsp;</b></div></td>
+                        <td class="functions_box1"><div class="search_box"><input type="date" ></div></td>
+                    </tr>
+                </table>
+                <table class="table_list_Product">
+                    <colgroup>
+                        <col span="1" style="width: 60%;" class="tinhhinhkinhdoanh">
+                        <col span="1" style="width: 40%;" class="marketing">
+                        
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Biểu đồ  </th>
+                            <th> Chỉ số Marketing</th>
+                        </tr>
+                    </thead>
+                    <tbody>    
+                        <tr>
+                            <td><img src="image/dashboard/dashboard.jpg" class="image1"></td>
+                            <td><img src="image/dashboard/marketing.jpg"  class="image2"></td> 
+                        </tr>
+                        <tr>
+                            <td><img src="image/dashboard/user.jpg" class="image1"></td>
+                            <td><img src="image/dashboard/marketing.jpg" class="image2"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var dropdown = document.getElementsByClassName("dropdown_btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

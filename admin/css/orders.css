@@ -1,0 +1,613 @@
+/*SIDEBAR*/
+:root {
+    --red: #BD3213;
+    --black: #000;
+    --white: #fff;
+    --light_gray: #eceff3;
+}
+
+a{
+    text-decoration:none;
+}
+
+* {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    transition: width none;
+}
+.mybody{
+    display:flex;
+    /* position: absolute; */
+    height: 100%;
+}
+.mycontent {
+    width: 100%;
+    margin: auto;
+    background-color: var(--light_gray);
+    margin-top: 30px;
+}
+.mycontent {
+    padding: 10px;
+}
+
+/*-------------------------------------------SIDEBAR----------------------------------------------------*/
+.logo{
+    width:100%;
+    background-color: var(--red);
+    display:flex;
+    justify-content:center;
+}
+.sidebar {
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.6s;
+    width: 15%;
+    background-color: var(--black);
+    color: var(--white);
+    font-weight: 500;
+    border: 1px solid black;
+}
+
+    .sidebar a, .dropdown_btn {
+        padding: 6px 10px;
+        text-decoration: none;
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+        color: white;
+    }
+
+.dropdown-container {
+    display: block;
+    text-decoration: none;
+    background-color: var(--black);
+}
+
+    .dropdown-container a {
+        border: none;
+        color: white;
+        padding-left: 50px;
+        text-align:left;
+    }
+
+.sidebar a:hover, .dropdown-btn:hover {
+    color: var(--white);
+    background-color: var(--red);
+}
+
+.fa-caret-down {
+    float: right;
+    padding-right: 6px;
+}
+
+    .fas{
+        width:24px;
+        height:24px;
+    }
+
+   /*------------------------------------ HEADER---------------------------------------*/
+.content {
+    width: 85%;
+    background-color: var(--light_gray);
+}
+.header{
+    height: 70px;
+    background-color: var(--red);
+    color:var(--white);
+    align-items: center;
+    font-size:16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: right;    
+}
+.header button {
+    align-items: center;
+    margin-inline-start: 10px;
+    color: #fff;
+    background-color: #BD3213;
+}
+.header .user {
+    align-items: center;
+    text-align: right;
+    padding-right: 30px;
+}
+/*----------------------------RESPONSIVE---------------------------*/
+#check{
+    display:none;
+}
+label #btn, label #cancel{
+    position:absolute;
+    cursor:pointer;
+    padding: 5px;
+}
+label #btn{
+    margin: 20px 15px;
+    color:white;
+}
+
+#check:checked ~ .sidebar{
+    left:0;
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 900px){
+    .content{
+        width:100%;
+        height:100%;
+    }
+    .sidebar{
+        position:fixed;
+        left:-35%;
+        width: 35%;
+        height: 100%;
+    }
+    #check:checked ~ label #btn {
+        left: 35%;
+        opacity: 0;
+        pointer-events: none;
+    }
+    label #cancel {
+        z-index: 1111;
+        left: -35%;
+        color: white;
+    }
+    #check:checked ~ label #cancel {
+        left: 30%;
+    }
+    .btn_Orders_box{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+    .btn_Orders{
+        justify-content: center;
+    }
+
+    .btn_Orders_box div{
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .btn_Orders_box div input{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    *{
+        font-size: 14px;
+    }
+    .content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -50%;
+        width: 50%;
+        height: 100%;
+    }
+
+    #check:checked ~ label #btn {
+        left: 50%;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    label #cancel {
+        z-index: 1111;
+        left: -50%;
+        color: white;
+    }
+
+    #check:checked ~ label #cancel {
+        left: 45%;
+    }
+    
+    .fas {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* =========== ALL BASIC STYLE ================================= */
+
+:root {
+    --red: #BD3213;
+    --black: #000;
+    --white: #fff;
+    --light_gray: #eceff3;
+}
+
+* {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    transition: width none;
+}
+
+body {
+    background: var(--white);
+}
+.title{
+    text-decoration:none;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 32px;
+    font-style:normal;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.title:hover {
+    color: #BD3213;
+}
+.container_Products {
+    width: 95%;
+    margin: 1.5em auto;
+    font-size:16px;
+}
+.btn_Orders {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 16px;
+    padding: 0px 10px 0px 10px;
+    margin-bottom: 10px;
+
+}
+.btn_Orders_box {
+    display: inline-flex;
+    justify-content: left;
+}
+.functions_box {
+    display: inline-flex;
+    margin: 5px 0px;
+}
+.functions_box div {
+    justify-content: right;
+}
+.filter_box {
+    display: flex;
+    color: white;
+    width: 210px;
+    background: var(--red);
+    padding: 5px;
+    border-radius: 16px;
+    margin-right: 8px;
+    justify-content: left;
+    vertical-align: middle;
+    align-items: center;
+}
+.option_Product {
+    color: white;
+    font-weight: bold;
+    background-color: #BD3213;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    
+}
+.fa-filter {
+    padding-left: 5px;
+    margin-top: 5px;
+}
+.search_box {
+    width: 250px;
+    border: 1px solid #BD3213;
+    padding: 5px;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.search_box input {
+    width: 230px;
+    justify-content: center;
+    padding: 0px 30px 0px 5px;
+    vertical-align: middle;
+}
+.fa-search {
+    align-items: center;
+    justify-content: right;
+    margin-left: -25px;
+    color: #BD3213;
+}
+.functions_box button {
+    border-radius: 10px;
+    margin: 0px 4px;
+    color: #fff;
+    background-color: #BD3213;
+    font-weight: bold;
+    padding: 6px 10px;
+}
+/*-------------------------------CONTENT PRODUCTS---------------------------------*/
+.content_Orders {
+    background: var(--white);
+    padding: 1.5em 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.table_list_Order {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0 0.1em;
+}
+
+    .table_list_Order tr th {
+        background: var(--red);
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 0.5em;
+        color: #fff;
+        text-align: center;
+    }
+
+    .table_list_Order tr td {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        padding: 0.5em;
+        text-align: center;
+    }
+
+    .table_list_Order .last td {
+        border-bottom: none;
+    }
+
+    .table_list_Order .last {
+        border-bottom: none;
+    }
+
+    .table_list_Order tr:hover {
+        background: var(--red);
+        color: #fff;
+    }
+
+/*-------------------------------------BOX------------------------------*/
+
+.box_container {
+    display: flex;
+    margin: 10px 10px;
+    align-items:center;
+    justify-content:center;
+}
+
+.box_1 {
+    width: calc(100%/7);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background: var(--white);
+    position: relative;
+    padding: 10px;
+    margin: 10px 10px 10px 0px;
+}
+
+.box_1_tittle {
+    font-size: 18px;
+    color: #000;
+    margin: auto;
+    font-weight: bold;
+}
+
+.box_1_number {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: right;
+    color: var(--red);
+    margin: auto;
+}
+
+
+/* ============== RESPONSIVE =================================== */
+@media screen and (min-width: 400px) and (max-width: 900px) {
+    
+    .content{
+        width:100%;
+        height:100%;
+    }
+    .sidebar{
+        position:fixed;
+        left:-35%;
+        width: 35%;
+        height: 100%;
+    }
+    
+    .table_list_Order {
+        text-align: unset;
+    }
+
+        .table_list_Order tr {
+            border: none;
+            text-align:end;
+        }
+
+
+    thead {
+        display: none;
+    }
+
+    .table_list_Order, .table_list_Order tbody, .table_list_Order tr, .table_list_Order td {
+        display: block;
+        width: 100%;
+    }
+
+        .table_list_Order tr {
+            margin-bottom: 15px;
+            border: 2px solid var(--red);
+            padding: 10px;
+            background-color: var(--white);
+        }
+
+        .table_list_Order td:first-child::before {
+            text-align: center;
+            vertical-align: middle;
+            content: "Mã đơn hàng";
+        }
+
+        .table_list_Order td:nth-child(2)::before {
+            content: "Trạng thái";
+        }
+
+        .table_list_Order td:nth-child(3)::before {
+            content: "Ngày đặt hàng";
+        }
+
+        .table_list_Order td:nth-child(4)::before {
+            content: "Tổng tiền";
+        }
+        .table_list_Order td:nth-child(5)::before {
+            content: "Mã khách hàng";
+        }
+        .table_list_Order td:nth-child(6)::before {
+            content: "Mã giảm giá";
+        }
+        .table_list_Order td:nth-child(7)::before {
+            content: "Phương thức vận chuyển";
+        }
+        .table_list_Order td:nth-child(8)::before {
+            content: "Mã hóa đơn";
+        }
+        .table_list_Order td:nth-child(9)::before {
+            content: "Ghi chú";
+        }
+    td {
+        text-align: right;
+    }
+
+        td::before {
+            float: left;
+            font-weight: bold;
+            margin-right: 10%;
+        }
+
+    .table_list_Order th, tr, td {
+        border-bottom: 0;
+        font-size: 14px;
+    }
+
+    .table_list_Order td:last-child {
+        width: 100%;
+    }
+
+    .box_container{
+        display:block;
+    }
+    .box_1{
+        width:100%;
+    }
+    .btn_Orders_box {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .table_list_Order {
+        text-align: unset;
+    }
+
+        .table_list_Order tr {
+            border: none;
+            text-align:end;
+        }
+
+
+    thead {
+        display: none;
+    }
+
+    .table_list_Order, .table_list_Order tbody, .table_list_Order tr, .table_list_Order td {
+        display: block;
+        width: 100%;
+    }
+
+        .table_list_Order tr {
+            margin-bottom: 15px;
+            border: 2px solid var(--red);
+            padding: 10px;
+            background-color: var(--white);
+        }
+
+        .table_list_Order td:first-child::before {
+            text-align: center;
+            vertical-align: middle;
+            content: "Mã đơn hàng";
+        }
+
+        .table_list_Order td:nth-child(2)::before {
+            content: "Trạng thái";
+        }
+
+        .table_list_Order td:nth-child(3)::before {
+            content: "Ngày đặt hàng";
+        }
+
+        .table_list_Order td:nth-child(4)::before {
+            content: "Tổng tiền";
+        }
+        .table_list_Order td:nth-child(5)::before {
+            content: "Mã khách hàng";
+        }
+        .table_list_Order td:nth-child(6)::before {
+            content: "Mã giảm giá";
+        }
+        .table_list_Order td:nth-child(7)::before {
+            content: "Phương thức vận chuyển";
+        }
+        .table_list_Order td:nth-child(8)::before {
+            content: "Mã hóa đơn";
+        }
+        .table_list_Order td:nth-child(9)::before {
+            content: "Ghi chú";
+        }
+    td {
+        text-align: right;
+    }
+
+        td::before {
+            float: left;
+            font-weight: bold;
+            margin-right: 10%;
+        }
+
+    .table_list_Order th, tr, td {
+        border-bottom: 0;
+        font-size: 14px;
+    }
+
+    .table_list_Order td:last-child {
+        width: 100%;
+    }
+
+    .box_container{
+        display:block;
+    }
+    .box_1{
+        width:100%;
+    }
+    .btn_Orders {
+        display: block;
+    }
+    .btn_Orders_box {
+        display: flex;
+        flex-direction: column;
+    }
+    .functions_box {
+        display: inline-flex;
+    }
+}

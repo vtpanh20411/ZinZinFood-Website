@@ -1,0 +1,126 @@
+[
+    {
+      "masp": "1",
+      "tensp": "Quẩy bò ZinZin",
+      "nguon": "Shopbetra2k",
+      "sl": "22",
+      "status": "Còn hàng",
+      "date": "29/11/2022"
+    },
+    {
+        "masp": "2",
+      "tensp": "Mực bento cay cay",
+      "nguon": "Shopbetra2k",
+      "sl": "13",
+      "status": "Còn hàng",
+      "date": "29/11/2022"
+    }
+    ,
+    {
+        "masp": "3",
+      "tensp": "Tăm que giòn vị",
+      "nguon": "Shopbetra2k",
+      "sl": "13",
+      "status": "Còn hàng",
+      "date": "29/11/2022"
+    }
+    ,
+    {
+        "masp": "4",
+      "tensp": "Khô gà lá chanh",
+      "nguon": "Shopbetra2k",
+      "sl": "12",
+      "status": "Còn hàng",
+      "date": "29/11/2022"
+    }
+    ,
+    {
+        "masp": "5",
+      "tensp": "Khô heo giả bò",
+      "nguon": "Shopbetra2k",
+      "sl": "12",
+      "status": "Còn hàng",
+      "date": "29/11/2022"
+    }
+    ,
+    {
+        "masp": "6",
+      "tensp": "Snack bò thơm cay",
+      "nguon": "Shopbetra2k",
+      "sl": "10",
+      "status": "Còn hàng",
+      "date": "29/11/2022"
+    }
+    ,
+    {
+        "masp": "7",
+      "tensp": "Bánh tráng cuộn bơ",
+      "nguon": "Bánh tráng Minh Triết",
+      "sl": "10",
+      "status": "Còn hàng",
+      "date": "29/11/2022"
+    }
+    ,
+    {
+        "masp": "8",
+      "tensp": "Bánh tráng rong biển",
+      "nguon": "Bánh tráng Minh Triết",
+      "sl": "10",
+      "status": "Còn hàng",
+      "date": "29/11/2022"
+    }
+    ,
+    {
+        "masp": "9",
+      "tensp": "Bánh tráng trộn sate bò",
+      "nguon": "Bánh tráng Minh Triết",
+      "sl": "27",
+      "status": "Còn hàng",
+      "date": "29/11/2022"
+    }
+    ,
+    {
+        "masp": "10",
+      "tensp": "Bánh tráng phô mai tôm hành",
+      "nguon": "Bánh tráng Minh Triết",
+      "sl": "20",
+      "status": "Còn hàng",
+      "date": "29/11/2022"
+    }
+    ,
+    {
+        "masp": "11",
+      "tensp": "Cơm cháy lắc khô gà",
+      "nguon": "Bánh tráng Minh Triết",
+      "sl": "5",
+      "status": "Ít hàng",
+      "date": "29/11/2022"
+    }
+    ,
+    {
+        "masp": "12",
+      "tensp": "Bánh tráng sa tế tắc",
+      "nguon": "Bánh tráng Minh Triết",
+      "sl": "10",
+      "status": "Còn hàng",
+      "date": "29/11/2022"
+    }
+    ,
+    {
+        "masp": "13",
+      "tensp": "Bánh tráng tỏi phi cay",
+      "nguon": "Bánh tráng Minh Triết",
+      "sl": "25",
+      "status": "Còn hàng",
+      "date": "29/11/2022"
+    }
+    ,
+    {
+        "masp": "14",
+      "tensp": "Cơm cháy chà bông",
+      "nguon": "Bánh tráng Minh Triết",
+      "sl": "0",
+      "status": "Hết hàng",
+      "date": "29/11/2022"
+    }
+]

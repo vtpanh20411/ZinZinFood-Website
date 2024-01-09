@@ -1,0 +1,364 @@
+<html>
+     <!--Phần đầu-->
+     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/sản phẩm.css" rel="stylesheet" type="text/css"/>
+        <link href="css/headerproduct.css" rel="stylesheet" type="text/css"/>
+        <link href="css/footerstyle.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Trang snack bò thơm cay | ZinZin Food - Đồ ăn vặt ZinZin</title>
+    </head>
+    <body  bgcolor="#eceff3" class="body">
+        <script>
+            function Moinhat()
+            {
+                    window.location="sản phẩm mới nhất.html";
+            }
+
+            function Phobien()
+            {
+                   window.location="sản phẩm phổ biến.html";
+            }
+
+            function BanChay()
+            {
+                   window.location="Sản phẩm bán chạy.html";
+            }
+            function Sapxep()
+            {
+                  var t = document.getElementById("select").value;
+                  if (t=="increase")
+                  {
+                    window.location="Giá thấp đến cao.html";
+                  }
+                  else if (t=="decrease")
+                  {
+                    window.location="Giá cao đến thấp.html";
+                  }
+                  else
+                  { window.location="05-Product.html";
+                  }      
+            }
+        </script>
+       <div class="header">
+        <div class="searchbar">
+            <div class="logo">
+                <a href="02-Homepage.html"  title="Zin Zin Food"><img class="logokey" src="image/logo/whitelogo.png" alt="logo" ></a>
+                <a href="02-Homepage.html" title="Zin Zin Food"><img class="logotitle" src="image/logo/whitetitle.png" alt="logotitle" ></a>
+            </div>
+            <div class="search_box">
+            
+        <!-- Menu hidden ----------------------------------------- -->
+                <div class="header-menu-bar-hid">
+                    <input type="checkbox" id="check-menu-header">
+                    <label for="check-menu-header">
+                        <div class="header-format-icon-bar">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </div>
+                    </label>
+                    
+                    <div class="div-header-list-menu">
+                        <li><a href="02-Homepage.html">Trang chủ</a></li>
+                        <li><a href="04-Account.html">Trang cá nhân</a></li>
+                            <li><a href="03-LoginSignup.html">Đăng nhập</a></li>
+                            <li><a href="">Thông báo</a></li>
+                            <li><a href="09-Cart.html">Giỏ hàng</a></li>
+                        <li><a href="05-Product.html">Sản phẩm</a></li>
+                        <li><a href="07-AboutUs.html">Về Zin Zin Food</a></li>
+                        <li><a href="11-Policy.html">Chính sách & Điều khoản</a></li>
+                        <li><a href="12-Voucher.html">Ưu đãi</a></li>
+                        <!-- <li><a>Liên hệ</a></li> -->
+                        </ul>
+                        </div>
+                    </div>
+        <!-- Search box -->
+
+    <form onsubmit="submitForm(event)">
+            <div><input class="inputbox-search" data-view-id="main_search_from_input" type="text" value placeholder="Tìm kiếm đồ ăn vặt" id="inputvalue"></div>
+        </div> 
+        <!-- <input data-view-id="main_search_from_button" class="Search_Button" type="submit" title="Tìm kiếm" /> -->
+        <div class="button_search_group">
+            <button data-view-id="main_search_from_button" class="Search_Button">
+            <i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+    </form>
+        <div id="results"></div>
+            <script>
+                function submitForm(event){ 
+                event.preventDefault();
+                var ele = document.getElementById("inputvalue");                
+       
+                if (ele.value +""==="bánh tráng"){window.location.replace("search_banhtrang.html")}
+                else if (ele.value +""==="banh trang"){window.location.replace("search_banhtrang.html")}
+                else if (ele.value +""==="bánh tráng cuộn bơ"){window.location.replace("search_banhtrangcuonbo.html")}
+                else if (ele.value +""==="cuộn bơ"){ window.location.replace("search_banhtrangcuonbo.html")}
+                else if (ele.value +""==="cuon bo"){window.location.replace("search_banhtrangcuonbo.html")}
+                else if (ele.value +""==="banh trang cuon bo"){window.location.replace("search_banhtrangcuonbo.html")}
+
+                else if (ele.value +""==="bánh tráng phô mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                else if (ele.value +""==="banh trang pho mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                else if (ele.value +""==="phô mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                else if (ele.value +""==="pho mai"){window.location.replace("search_banhtrangphomaitomhanh.html")}
+                
+                else if (ele.value +""==="bánh tráng rong biển"){ window.location.replace("search_banhtrangrongbien.html")}
+                else if (ele.value +""==="banh trang rong bien"){ window.location.replace("search_banhtrangrongbien.html")}
+                else if (ele.value +""==="rong biển"){ window.location.replace("search_banhtrangrongbien.html")}
+                else if (ele.value +""==="rong bien"){ window.location.replace("search_banhtrangrongbien.html")}
+
+                else if (ele.value +""==="bánh tráng sa tế bò"){window.location.replace("search_banhtrangsatebo.html")}
+                else if (ele.value +""==="banh trang sa te bo"){window.location.replace("search_banhtrangsatebo.html")}
+                else if (ele.value +""==="sa tế bò"){window.location.replace("search_banhtrangsatebo.html")}
+                else if (ele.value +""==="sa te bo"){window.location.replace("search_banhtrangsatebo.html")}
+                else if (ele.value +""==="sate bò"){window.location.replace("search_banhtrangsatebo.html")}
+                else if (ele.value +""==="sate bo"){window.location.replace("search_banhtrangsatebo.html")}
+                else if (ele.value +""==="bò"){window.location.replace("search_banhtrangsatebo.html")}
+                else if (ele.value +""==="bo"){window.location.replace("search_banhtrangsatebo.html")}
+                else if (ele.value +""==="sate"){window.location.replace("search_banhtrangsatebo.html")}
+                else if (ele.value +""==="sa tế"){window.location.replace("search_banhtrangsatebo.html")}
+                
+                else if (ele.value +""==="bánh tráng sa tế tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                else if (ele.value +""==="banh trang sa te tac"){window.location.replace("search_banhtrangsatetac.html")}
+                else if (ele.value +""==="sa tế tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                else if (ele.value +""==="sa te tac"){window.location.replace("search_banhtrangsatetac.html")}
+                else if (ele.value +""==="sate tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                else if (ele.value +""==="sate tac"){window.location.replace("search_banhtrangsatetac.html")}
+                else if (ele.value +""==="tắc"){window.location.replace("search_banhtrangsatetac.html")}
+                else if (ele.value +""==="tac"){window.location.replace("search_banhtrangsatetac.html")}
+
+                else if (ele.value +""==="bánh tráng tỏi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                else if (ele.value +""==="banh trang toi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                else if (ele.value +""==="tỏi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                else if (ele.value +""==="toi phi cay"){window.location.replace("search_banhtrangtoiphicay.html")}
+                
+                else if (ele.value +""==="cơm cháy khô gà"){ window.location.replace("search_comchaykhoga.html")}
+                else if (ele.value +""==="com chay kho ga"){ window.location.replace("search_comchaykhoga.html")}
+                else if (ele.value +""==="cơm cháy"){ window.location.replace("search_comchaykhoga.html")}
+                else if (ele.value +""==="com chay"){ window.location.replace("search_comchaykhoga.html")}
+                
+                else if (ele.value +""==="khô gà lá chanh"){window.location.replace("search_khogalachanh.html")}
+                else if (ele.value +""==="kho ga la chanh"){window.location.replace("search_khogalachanh.html")}
+                else if (ele.value +""==="khô gà"){window.location.replace("search_khogalachanh.html")}
+                else if (ele.value +""==="kho ga"){window.location.replace("search_khogalachanh.html")}
+
+                
+                else if (ele.value +""==="khô heo giả bò"){window.location.replace("search_khoheogiabo.html")}
+                else if (ele.value +""==="kho heo gia bo"){window.location.replace("search_khoheogiabo.html")}
+                else if (ele.value +""==="kho heo"){window.location.replace("search_khoheogiabo.html")}
+                else if (ele.value +""==="khô heo"){window.location.replace("search_khoheogiabo.html")}
+                else if (ele.value +""==="khô bò"){window.location.replace("search_khoheogiabo.html")}
+                else if (ele.value +""==="kho bo"){window.location.replace("search_khoheogiabo.html")}
+
+                else if (ele.value +""==="tăm que cay cay"){window.location.replace("search_tamquecaycay.html")}
+                else if (ele.value +""==="tăm que"){window.location.replace("search_tamquecaycay.html")}
+                else if (ele.value +""==="tam que cay cay"){window.location.replace("search_tamquecaycay.html")}
+                else if (ele.value +""==="tam que"){window.location.replace("search_tamquecaycay.html")}
+
+                else if (ele.value +""==="quẩy bò zinzin"){window.location.replace("search_quaybozinzin.html")}
+                else if (ele.value +""==="quẩy bò"){window.location.replace("search_quaybozinzin.html")}
+                else if (ele.value +""==="quay bo zinzin"){window.location.replace("search_quaybozinzin.html")}
+                else if (ele.value +""==="quay bo"){window.location.replace("search_quaybozinzin.html")}
+
+                else if (ele.value +""==="mực bento cay cay" ){window.location.replace("search_mucbentocaycay.html")}
+                else if (ele.value +""==="mực bento" ){window.location.replace("search_mucbentocaycay.html")}
+                else if (ele.value +""==="muc bento cay cay" ){window.location.replace("search_mucbentocaycay.html")}
+                else if (ele.value +""==="muc bento" ){window.location.replace("search_mucbentocaycay.html")}
+                else if (ele.value +""==="bento" ){window.location.replace("search_mucbentocaycay.html")}
+
+                else if (ele.value +""==="snack bò thơm cay"){window.location.replace("search_snackbothomcay.html")}
+                else if (ele.value +""==="snack bò"){window.location.replace("search_snackbothomcay.html")}
+                else if (ele.value +""==="snack bo thom cay"){window.location.replace("search_snackbothomcay.html")}
+                else if (ele.value +""==="snack bo"){window.location.replace("search_snackbothomcay.html")}
+                else if (ele.value +""==="snack"){window.location.replace("search_snackbothomcay.html")}
+                else if (ele.value +""==="thơm cay"){window.location.replace("search_snackbothomcay.html")}
+                else if (ele.value +""==="thom cay"){window.location.replace("search_snackbothomcay.html")}
+
+                else  {   window.alert("Không có kết quả tìm kiếm!");}
+
+        } 
+            </script>      
+            <div class="tool-group">
+                <a href="09-Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                <i class="fa fa-bell" aria-hidden="true"></i>
+                <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+    
+                <div class="header-user-box">
+                    <input type="checkbox" id="header-user">
+                    <label for="header-user">
+                        <div class="header-user-icon-div">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                    </label>             
+                    <div class="user-options">
+                            <li ><a href="04-Account.html" id="header-account">Cá nhân</a></li>
+                            <li><a href="03-LoginSignup.html" id="header-dangnhap">Đăng nhập</a></li>
+                            <!-- <li><a>Đăng xuất</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <div class="navigationbar">
+            <ul class="navigationtab">
+                <li><a href="02-Homepage.html">Trang chủ</a></li>        
+                <li><a href="05-Product.html">Sản phẩm</a></li>
+                <li><a href="07-AboutUs.html">Về Zin Zin Food</a></li>
+                <li><a href="11-Policy.html">Chính sách & Điều khoản</a></li>
+                <li><a href="12-Voucher.html">Ưu đãi</a></li>
+                        <!-- <li><a>Liên hệ</a></li> -->
+            </ul>
+        </div>
+    </div>
+        <div id="middle" class="middle">
+            <!-- column 1 -->
+            <div id="column1"> 
+                <h3 id="list"> DANH SÁCH SẢN PHẨM </h3>
+                <a id="link" href="05-Product.html">Tất cả các món</a><br></br>
+                <a id="link" href="bánh tráng các loại.html">Bánh tráng các loại</a> <br></br>
+                <a id="link" href="khô thịt các loại.html">Khô thịt các loại</a> <br></br>
+                <a id="link" href="cơm cháy các loại.html">Cơm cháy các loại</a> <br></br>
+                <a id="link" href="đồ ăn vặt nội địa.html">Đồ ăn vặt nội địa </a> <br></br>
+                <a id="link" href="cơm cháy lắc khô gà.html">Cơm cháy lắc khô gà</a><br></br>
+                <a id="link" href="quẩy bò zinzin.html">Quẩy bò ZinZin</a><br></br>
+                <a id="link" href="mực bento.html">Mực bento cay cay</a><br></br>
+                <a id="link" href="rong biển.html">Bánh tráng rong biển</a><br></br>
+                <a id="link" href="tỏi.html">Bánh tráng tỏi phi cay</a><br></br>
+                <a id="link" href="tôm hành.html">Bánh tráng phô mai tôm hành</a><br></br>
+                <a id="link" href="cuộn bơ.html">Bánh tráng cuộn bơ</a><br></br>
+                <a id="link" href="khô gà.html">Khô gà lá chanh</a><br></br>
+                <a id="link" href="khô heo.html">Khô heo giả bò</a><br></br>
+                <a id="link" href="tăm que.html">Tăm que giòn vị</a><br></br>
+                <a id="link" href="snack.html">Snack bò thơm cay</a><br></br>
+                <a id="link" href="sa tế bò.html">Bánh tráng sa tế bò</a><br></br>
+                <a id="link" href="sa tế tắc.html">Bánh tráng sa tế tắc</a><br></br>
+               </div>
+            <!-- column 2 -->
+                   <div id="column2">
+                    <!-- Phần filter -->
+                    <div class="filter">
+                        <span id="arrange"> Sắp xếp theo </span>
+                        <button class="btn" onclick="Phobien()">Phổ biến</button>
+                        <button class="btn" onclick="Moinhat()">Mới nhất</button>
+                        <button class="btn" onclick="BanChay()">Bán chạy</button>
+                        <select id="select" onchange="Sapxep()" size="1">
+                            <option value="price" >Giá</option>
+                            <option value="increase">Giá thấp đến cao</option>
+                            <option value="decrease">Giá cao đến thấp</option>
+                        </select>
+                     </div>
+                    <!-- Phần sản phẩm -->
+                     <ul class="products">
+                    <!-- Sản phẩm 9 -->
+                    <li>
+                        <div class="product_item">
+                           <div class="product_top">
+                               <a href="Snack bò thơm cay chi tiết.html" class="product_pic">
+                               <img src="image/product/snackbothomcay.jpg" alt="ảnh snack bò"></img>
+                               </a>
+                           </div>
+                           <div class="product_info">
+                               <a href="Snack bò thơm cay chi tiết.html" id="product_name">Snack bò thơm cay xé tan lo âu căng thẳng</a> 
+                               <a href="Snack bò thơm cay chi tiết.html" id="product_price">4.000đ</a> 
+                               <a class="star2">
+                                <i id="sao1" class="fa fa-star"></i>
+                                <i id="sao2" class="fa fa-star"></i>
+                                <i id="sao3" class="fa fa-star"></i>
+                                <i id="sao4" class="fa fa-star"></i>
+                                <i id="sao5" class="fa fa-star"></i>
+                            </a>
+                               <a href="" id="diachi">Thành phố Hồ Chí Minh</a>
+                               <a href="" id="luotmua">212 đã bán</a>
+                           </div>
+                        </div>
+                        </li>
+                    </ul>
+                    </div>
+        </div>
+        <div class="footer">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="css/footerstyle.css">
+            <script src="javascript/login.js"></script>
+            <script src="javascript/footer.js"></script>
+    
+            <div class="submission_area">
+                <div class="text_guide">
+                    <div class="title">Đăng ký theo dõi</div>
+                    <div class="content">Đừng bỏ lỡ hàng ngàn sản phẩm và khuyến mãi cực hấp dẫn.</div>
+                </div>
+                <div class="box_input_group">
+                    <input id="input-email" class="inputbox" type="text" placeholder="Nhập email của bạn...">
+                    <input class="submit" type="submit" value="Đăng ký" onclick="ValidateEmail()" >
+                </div>
+            </div>
+    
+            <div class="footer_content_area">
+                <div class="about_zinzin_area">
+                    <div class="about_zinzin_texttitle">VỀ ZIN ZIN FOOD</div>
+                    <ul class="about_zinzin_detail">
+                        <li><a>CÁC CÂU HỎI THƯỜNG GẶP</a></li>
+                        <li><a>GỬI YÊU CẦU HỖ TRỢ</a></li>
+                        <li><a>HƯỚNG DẪN ĐẶT HÀNG</a></li>
+                        <li><a href="11-Policy.html">PHƯƠNG THỨC VẬN CHUYỂN</a></li>
+                        <li><a href="11-Policy.html">CHÍNH SÁCH ĐỔI TRẢ</a></li>
+                        <li><a href="11-Policy.html">HỖ TRỢ KHÁCH HÀNG: HOTRO@ZINZIN.VN</a></li>
+                        <li><a href="11-Policy.html">BÁO LỖI BẢO MẬT SECURITY@ZINZIN.VN</a></li>
+                    </ul>
+                </div>
+    
+                <div class="payment_area">
+                    <div class="payment_texttitle">PHƯƠNG THỨC THANH TOÁN</div>
+                    <ul class="payment_detail">
+                        <li class="visa"><a><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+                        <li class="momo"><a><img src="image/footer/momo1.png" alt="momo"></a></li>
+                        <li class="bank"><a><i class="fa fa-university" aria-hidden="true"></i></a></li>
+                        <li class="cash"><a><i class="fa fa-money" aria-hidden="true"></i></a></li>
+                        
+                    </ul>
+    
+                    <div class="footer_credit_area">
+                        <div class="logo_credit">
+                            <img class="logo-footer" src="image/logo/whitelogo.png" alt="logo">
+                            <img src="image/footer/credit.png" alt="BoCongThuong">
+                        </div>
+                        <div class="credit_bytext">COPYRIGHT 	&#169; 2022 ZIN ZIN FOOD ALL RIGHT RESESERVED</div>
+                        
+                    </div>
+                </div>
+    
+                <div class="Col3_connect_app">
+                    <div class="connect_area">
+                        <div class="connect_us_texttitle">KẾT NỐI VỚI CHÚNG TÔI</div>
+                        <ul class="social_media_detail">
+                            <li class="facebook"><a href="https://www.facebook.com/ZinZinFoodst"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                            <li class="tiktok"><a href="https://www.tiktok.com/@zinzinfood"><img src="image/footer/tiktok.png" alt="tiktok"></a></li>
+                            <li class="email"><a href="zinzinfood.contact@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="download_app_area">
+                        <div class="download_app_texttitle">TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI DI ĐỘNG</div>
+                        <ul class="download_app_detail">
+                            <li><a><img src="image/footer/qr.png" alt="qrcode"></a></li>
+                            <li><a><img src="image/footer/gg_play.png" alt="chplay"></a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-4-message">
+                
+                    <div class="chat_area">
+                        <i><img src="image/footer/messenger.png" alt="messenger" ></i>
+                    </div>
+                    <div class="fwd_area" onclick="scrollToTop()">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </body>
+    <!-- <div  class="footer"> <footer></footer></div> -->
+</html>

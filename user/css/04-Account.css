@@ -1,0 +1,125 @@
+:root {
+    --red: #BD3213;
+    --black: #000;
+    --white: #fff;
+    --light_gray: #eceff3;
+}
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mybody{
+    background-color: var(--light_gray);
+}
+#header{
+    z-index: 2;
+    background-color: var(--red) ;
+    height: 100%;
+    border: none;
+    text-align: center;
+}
+
+#header h1{
+    color: var(--white);
+    padding: 26px 0;
+    margin: 0;
+}
+#btnLuu{
+    text-decoration: none;
+    background-color: black;
+    color: #fff;
+    width: 60px;
+    margin: 20px 0;
+    padding: 0;
+    border: none;
+}
+
+/* ------------slidebar------------ */
+.slidebar {
+    border: 1px solid #BD3213;
+    margin: 10px 0px 0 0px;
+    padding: 0px;
+    background-color: var(--white);
+}
+.slidebar h3{
+    background-color: #BD3213;
+    color: var(--white);
+    padding-left: 10px;
+}
+.slidebar a,.dropdown_btn {
+    padding: 6px 10px;
+    text-decoration: none;
+    display: block; 
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    border-bottom: 1px dashed;
+}
+.dropdown-container {
+    display: block;
+    text-decoration: none;
+}
+
+    .dropdown-container a {
+        border: none;
+        padding-left: 30px;
+        text-align:left;
+    }
+
+.slidebar a:hover, .dropdown_btn:hover,#btnLuu:hover{
+    color: var(--white);
+    background-color: #BD3213;
+}
+
+.fa-caret-down {
+    float: right;
+    padding-right: 6px;
+}
+
+    .fas{
+        width:24px;
+        height:24px;
+    }
+
+.container-fluid{
+    margin: 0 10px;
+    padding: none;
+}
+
+/* ------nội dung---------  */
+.content{
+    margin: 10px 0px 0 0px;
+    padding: 0;
+    background-color: var(--white);
+    border: 1px solid #BD3213;
+}
+.content h3,.noiDung td{
+    padding-left: 15px;
+}
+.noiDung tr{
+    line-height: 2;
+}
+.content h3{
+    font-weight: bolder;
+    border-bottom: 1px dashed;
+}
+.ThongTin{
+    font-weight: bold;
+}
+.col-sm-3 h3, .col-sm-9 h3{
+    font-size: 20px;
+}
+.container{
+    margin-top: 120px; 
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 600px) {
+    .container{
+        margin-top:85px;
+    }
+}

@@ -1,0 +1,369 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    transition: all .2s linear;
+    transition: width none;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.body {
+    width: 100%;
+    padding-top: 130px;
+}
+.body > div{
+    padding: 10px 100px;
+}
+.body >div >div >img {
+    height: 400px;
+    width: 400px;
+}
+.Introduce--Title {
+    text-align: justify;
+    margin-top: 10px;
+
+}
+.Introduce--Title h1{
+    color: #BD3213;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.Introduce--Title-image {
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+.Introduce--Brand {
+    background-color: #BD3213;
+    text-align: justify;
+
+    color: #ffffff;
+}
+.Introduce--Brand h2{
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px 0px 0px 0px;
+}
+.Introduce--Brand h3{
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.Introduce--Brand-image{
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+.Introduce--Value {
+    text-align: justify;
+
+}
+.Introduce--Value h2{
+    font-weight: bold;
+    color: #BD3213;
+    margin: 10px 0px 0px 0px;
+}
+.Introduce--Value h3{
+    font-weight: bold;
+    color: #BD3213;
+    margin-bottom: -10px;
+}
+.Introduce--Service {
+
+    margin: 10px 0px;
+    background-color: #BD3213;
+    color: #ffffff;
+}
+.Introduce--Service h2{
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px 0px 0px 0px;
+}
+.Introduce--Service-content h3{
+    font-weight: bold;
+    margin: 10px 0;
+}
+.Introduce--Product-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.Introduce--Product-content p {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.Table-Introduce--Product img {
+    width: 240px;
+    height: 200px;
+    margin: 0px 10px;
+}
+.Table-Introduce--Product div{
+    display: inline-flex;
+} 
+.Table-Introduce--Product tbody {
+    display: inline;
+    justify-content: center;
+}
+.Table-Introduce--Product td{
+    transition: all .2s ease-in-out;
+    padding: 0px 10px;
+}
+.Table-Introduce--Product td:hover {
+    transform: scale(1.1);
+    border-color: #ffffff;
+}
+.Introduce--Service-content button {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: 0;
+    outline: 0;
+    margin: 10px 0;
+}
+.Introduce--Service-content button > a{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #BD3213;
+    text-decoration: none;
+}
+.Introduce--Value-value {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.Table-Introduce--Value-value{
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    color: #BD3213;
+}
+.Table-Introduce--Value-value tbody {
+    display: inline;
+    justify-content: center;
+}
+.Table-Introduce--Value-value div {
+    justify-content: center;
+}
+.Table-Introduce--Value-value {
+    justify-content: center;
+    margin: 10px 0px;
+}
+.Table-Introduce--Value-value img {
+    margin: 0px 10px;
+}
+.Table-Introduce--Value-value-content{
+    text-transform: uppercase;
+    color: #BD3213;
+    font-weight: bold;
+}
+.Introduce--Payment-content {
+    position: relative;
+    text-align: justify;
+    margin-bottom: 20px;
+    transition: all .2s ease-in-out;
+}
+.Introduce--Payment-content:hover {
+    transform: translateY(20px);
+}
+.Introduce--Deliverly-content{
+    position: relative;
+    text-align: justify;
+    margin-bottom: 20px;
+    transition: all .2s ease-in-out;
+}
+.Introduce--Deliverly-content:hover {
+    transform: translateY(20px);
+}
+.Introduce--Customer-content{
+    position: relative;
+    text-align: justify;
+    margin-bottom: 20px;
+    transition: all .2s ease-in-out;
+}
+.Introduce--Customer-content:hover {
+    transform: translateY(20px);
+}
+.container_vision {
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content_1 {
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    box-sizing: border-box;
+    margin: auto;
+    text-transform: none;
+    line-height: 1.5;
+    transition: all .2s ease-in-out;
+}
+
+.content_1:hover{
+    transform: scale(1,1);
+    border-bottom: 5px solid #BD3213;
+}
+
+.title {
+    position: relative;
+    text-align: justify;
+    font-weight: bold;
+    margin: 10px 0px 10px 0px;
+    text-transform: none;
+    line-height: 1.5;
+}
+.nd {
+    text-transform: none;
+    line-height: 1.5;
+}
+.Introduce--Human {
+    background-color: #ffffff;
+    text-align: justify;
+}
+.Introduce--Human h2{
+    color: #BD3213;
+    font-weight: bold;
+    margin: 10px 0px 0px 0px;
+}
+.Table-Introduce--Human {
+    width: 100%;
+    text-align: center;
+}
+.Table-Introduce--Human div {
+    justify-content: center;
+}
+.Table-Introduce--Human tbody {
+    display: inline;
+    justify-content: center;
+}
+.Table-Introduce--Human td {
+    padding: 10px;
+    font-weight: bold;
+    color: #BD3213;
+    transition: all .2s ease-in-out;
+}
+.Table-Introduce--Human td:hover {
+    background-color: #BD3213;
+    border-radius: 20%;
+    margin: 10px;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+.Table-Introduce--Human-image {
+    width: 170px;
+    height: 170px;
+    margin: auto;
+    border-radius: 50%;
+    border: 5px solid #BD3213;
+}
+
+@media screen and (max-width: 900px) {
+    *{
+        font-size: 14px;
+    }
+    .body{
+        width: 100%;
+        padding-top: 110px;
+    }
+    .body > div{
+        padding: 10px 40px;
+    }
+    .body >div >div >img {
+        height: 320px;
+        width: 320px;
+    }
+    .Table-Introduce_Product, .Table-Introduce_Product tr, .Table-Introduce_Product td {
+        display: block;
+        width: 100%;
+    }
+    
+        .Table-Introduce_Human, .Table-Introduce_Human tr, .Table-Introduce_Human td {
+            display: block;
+            width: 100%;
+        }
+        .Table-Introduce--Human-image {
+            width: 120px;
+            height: 120px;
+        }
+        #service img {
+            width: 280px;
+            height: 200px;
+        }
+        #service td {
+            vertical-align: top;
+        }
+        #service button {
+            margin-top: unset;
+        }
+        .Table-Introduce--Value-value {
+            width: 100%;
+        }
+        .Table-Introduce--Value-value img {
+            width: 150px;
+        }
+}
+@media screen and (max-width: 500px) {
+    *{
+        font-size: 13px;
+    }
+    h1 {
+        font-size: 23px;
+    }
+    h2 {
+        font-size: 19px;
+    }
+    h3 {
+        font-size: 17px;
+    }
+    .body{
+        padding-top: 90px;
+        width: 100%;
+    }
+    .body > div{
+        padding: 10px 20px;
+    }
+    .body >div >div >img {
+        width: 200px;
+        height: 200px;
+    }
+    .Table-Introduce_Human tbody {
+        display: block;
+    }
+    .Table-Introduce--Human-image {
+        width: 84px;
+        height: 84px;
+    }
+    #service img {
+        width: 200px;
+        height: 120px;
+    }
+    .Table-Introduce--Product img {
+        width: 160px;
+        height: 120px;
+        margin: unset;
+    }
+    .Introduce--Product-content p {
+        font-size: 14px;
+    }
+   
+    .Table-Introduce--Value-value tbody {
+        display: block;
+    }
+    .Table-Introduce--Value-value img {
+        width: 140px;
+        height: 140px;
+    }
+    #service tr {
+        display: block;
+    }
+    #service td {
+        display: block;
+    }
+}
